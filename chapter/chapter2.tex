@@ -214,3 +214,119 @@ Because $\ket{\lambda = 1}\bra{\lambda = 1} = \begin{bmatrix}
 	0 & c
 	\end{bmatrix}
 \end{align}
+
+
+
+\subsection{}
+Suppose $\ket{\psi},\ \ket{\phi}$ are arbitrary vectors in $V$.
+\begin{align}
+	\left(\ket{\psi},\ (\ket{w}\bra{v}) \ket{\phi}\right)^* &=
+	\left((\ket{w}\bra{v})^\dagger \ket{\psi},\  \ket{\phi}\right)^*\\
+	&= \left(\ket{\phi},\ (\ket{w}\bra{v})^\dagger \ket{\psi} \right)\\
+	&= \bra{\phi} (\ket{w}\bra{v})^\dagger \ket{\psi}.
+\end{align}
+
+On the other hand,
+\begin{align}
+	\left(\ket{\psi},\ (\ket{w}\bra{v}) \ket{\phi}\right)^* 
+	&= (\braket{\psi | w} \braket{v | \phi})^*\\
+	&= \braket{\phi | v} \braket{w | \psi}.
+\end{align}
+
+Thus
+\begin{align}
+	\bra{\phi} (\ket{w}\bra{v})^\dagger \ket{\psi} = \braket{\phi | v} \braket{w | \psi} \text{ for arbitrary vectors } \ket{\psi},\ \ket{\phi}\\
+	\therefore (\ket{w}\bra{v})^\dagger = \ket{v}\bra{w}
+\end{align}
+
+
+\subsection{}
+\begin{align}
+	( (a_i A_i)^\dagger \ket{\phi},\ \ket{\psi} )
+	&= (\ket{\phi},\ a_i A_i \ket{\psi})\\
+	&= a_i (\ket{\phi},\ A_i \ket{\psi})\\
+	&= a_i (A_i^\dagger \ket{\phi},\ \ket{\psi})\\
+	&= (a_i^* A_i^\dagger \ket{\phi},\ \ket{\psi})\\
+%	
+	\therefore (a_i A_i)^\dagger = a_i^* A_i^\dagger
+\end{align}
+
+
+
+
+\subsection{}
+\begin{align}
+	((A^\dagger)^\dagger\ket{\psi},\ \ket{\phi} )
+	&= (\ket{\psi},\ A^\dagger \ket{\phi})\\
+	&= (A^\dagger \ket{\phi},\ \ket{\psi})^*\\
+	&= (\ket{\phi},\ A\ket{\psi})^*\\
+	&= (A\ket{\psi},\ \ket{\phi})\\
+	\therefore (A^\dagger)^\dagger = A
+\end{align}
+
+
+\subsection{}
+\begin{align}
+	P &= \sum_i \ket{i}\bra{i}.\\
+	P^2 &= \left(\sum_i \ket{i}\bra{i}\right) \left(\sum_j \ket{j}\bra{j}\right)\\
+	&= \sum_{i,j} \ket{i}\braket{i | j}\bra{j}\\
+	&= \sum_i \ket{i}\bra{j} \delta_{ij}\\
+	&= \sum_i \ket{i}\bra{i}\\
+	&= P
+\end{align}
+
+
+
+
+\setcounter{subsection}{17}
+\subsection{}
+Suppose $\ket{v}$ is a eigenvector with corresponding eigenvalue $\lambda$.
+\begin{align}
+	U \ket{v} &= \lambda \ket{v}.\\
+	1 &= \braket{v | v}\\
+	&= \bra{v} I \ket{v}\\
+	&= \bra{v} U^\dagger U \ket{v}\\
+	&= \lambda \lambda^* \braket{v | v}\\
+	&= \norm{\lambda}^2\\
+	\therefore \lambda &= e^{i \theta}
+\end{align}
+
+
+
+
+\subsection{}
+\begin{align}
+	X^2 = \begin{bmatrix}
+		0 & 1 \\ 
+		1 & 0
+	\end{bmatrix} 
+	\begin{bmatrix}
+		0 & 1 \\ 
+		1 & 0
+	\end{bmatrix}
+	= \begin{bmatrix}
+		1 & 0 \\ 
+		0 & 1
+	\end{bmatrix} = I
+\end{align}
+
+
+
+\subsection{}
+\begin{align}
+	U &\equiv \sum_i \ket{w_i}\bra{v_i}\\
+	A_{ij}^{'} &= \braket{v_i | A | v_j}\\
+	&= \braket{v_i | UU^\dagger A UU^\dagger | v_j}\\
+	&= \sum_{p,q,r,s} \braket{v_i | w_p} \braket{v_p | v_q} \braket{w_q | A | w_r} \braket{v_r | v_s} \braket{w_s | v_j}\\
+	&= \sum_{p,q,r,s} \braket{v_i | w_p} \delta_{pq} A_{qr}^{''} \delta_{rs}  \braket{w_s | v_j}\\
+	&= \sum_{p,r}  \braket{v_i | w_p}  \braket{w_r | v_j} A_{pr}^{''}
+\end{align}
+
+
+\setcounter{subsection}{25}
+\subsection{}
+
+
+
+
+
