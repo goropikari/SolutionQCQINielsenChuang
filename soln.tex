@@ -1,0 +1,47 @@
+% uplatex soln.tex && dvipdfmx soln.dvi
+\documentclass[11pt]{ujarticle}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[width=16.00cm, height=25.00cm]{geometry}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[english]{babel}
+
+%図の場所をなるべく指定した場所にする
+\usepackage{booktabs}
+\usepackage{here}
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\usepackage[all, warning]{onlyamsmath}
+
+%単位を書くときに使う
+\usepackage{siunitx}
+
+\usepackage{braket}
+\usepackage{dsfont}
+
+% コマンド定義
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm ||x||
+
+\title{Solution for Quantum Computation and Quantum Information by Nielsen and Chuang}
+%\author{tanaka taro}
+\date{\today} %\date{20xx年x月x日提出}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{0} % 表紙のページを0ページにする
+
+\tableofcontents
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{chapter/chapter2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%参考文献
+%\bibliographystyle{jplain}
+%\bibliography{ref} % ref.bib を読み込み
+\end{document}

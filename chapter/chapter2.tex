@@ -1,0 +1,216 @@
+\setcounter{section}{1}
+\section{Introduction to quantum mechanics}
+\subsection{}
+\begin{align}
+	\begin{bmatrix}
+		1 \\ 
+		-1
+	\end{bmatrix} 
+	+
+	\begin{bmatrix}
+		1 \\ 
+		2
+	\end{bmatrix}
+	-
+	\begin{bmatrix}
+		2 \\ 
+		1
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+		0 \\ 
+		0
+	\end{bmatrix}	
+\end{align}
+
+\subsection{}
+\begin{align}
+	A\ket{0} &= A_{11}\ket{0} + A_{21}\ket{1} = \ket{1} \Rightarrow A_{11} = 0,\ A_{21} = 1\\
+	A\ket{1} &= A_{12}\ket{0} + A_{22}\ket{1} = \ket{0} \Rightarrow A_{12} = 1,\ A_{22} = 0\\
+%
+	\therefore A &= 	
+	\begin{bmatrix}
+		0 & 1 \\ 
+		1 & 0
+	\end{bmatrix} 
+\end{align}\\
+
+\begin{align}
+	A &= 	
+	\begin{bmatrix}
+	1 & 0 \\ 
+	0 & 1
+	\end{bmatrix} \text{ w.r.t. } \left\{\ket{1},\ \ket{0} \right\}
+\end{align}
+
+
+\subsection{}
+\begin{align}
+	A \ket{v_i} &= \sum_{j} A_{ji}\ket{w_j}\\
+	B \ket{w_j} &= \sum_{k} B_{kj}\ket{x_k}
+\end{align}
+%
+Thus
+\begin{align}
+	BA \ket{v_i} &= B \left( \sum_{j} A_{ji}\ket{w_j} \right)\\
+	&= \sum_{j} A_{ji} B\ket{w_j}\\
+	&= \sum_{j,k} A_{ji} B_{kj}\ket{x_k}\\
+	&= \sum_k \left( \sum_j B_{kj} A_{ji}  \right) \ket{x_k}\\
+	&= \sum_k (BA)_{ki} \ket{x_k}
+\end{align}
+
+
+
+\subsection{}
+\begin{align}
+	I\ket{v_j} = \sum_i I_{ij} \ket{v_i} = \ket{v_j},\ \forall j.\\
+	\Rightarrow I_{ij} = \delta_{ij}
+\end{align}
+
+\setcounter{subsection}{5}
+\subsection{}
+\begin{align}
+	\left(\sum_i \lambda_i \ket{w_i},\ \ket{v}\right) &=
+	\left(\ket{v},\ \sum_i \lambda_i \ket{w_i}\right)^*\\
+	&= \left[\sum_i \lambda_i \left(\ket{v},\ \ket{w_i}  \right) \right]^*\\
+	&= \sum_i \lambda_i^* \left(\ket{v},\ \ket{w_i} \right)^*\\
+	&= \sum_i \lambda_i^* (\ket{w_i},\ \ket{v})
+\end{align}
+
+
+\subsection{}
+\begin{align}
+	\braket{w | v} &= \begin{bmatrix}
+		1 & 1
+	\end{bmatrix} 
+	\begin{bmatrix}
+	1 \\ 
+	-1
+	\end{bmatrix} 
+	= 1 - 1 = 0\\
+%	
+	\frac{\ket{w}}{\norm{\ket{w}}} &= 
+	\frac{\ket{w}}{\sqrt{\braket{w|w}}} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+	1 \\ 
+	1
+	\end{bmatrix}\\
+%	
+	\frac{\ket{v}}{\norm{\ket{v}}} &= 
+	\frac{\ket{v}}{\sqrt{\braket{v|v}}} = \frac{1}{\sqrt{2}} \begin{bmatrix}
+	1 \\ 
+	-1
+	\end{bmatrix}
+\end{align}
+
+
+\setcounter{subsection}{8}
+\subsection{}
+\begin{align}
+	\sigma_0 &= I = \ket{0}\bra{0} + \ket{1}\bra{1}\\
+	\sigma_1 &= X = \ket{0}\bra{1} + \ket{1}\bra{0}\\
+	\sigma_2 &= Y = -i\ket{0}\bra{1} + i\ket{1}\bra{0}\\
+	\sigma_3 &= Z = \ket{0}\bra{0} - \ket{1}\bra{1}
+\end{align}
+
+
+\subsection{}
+\begin{align}
+	\ket{v_j}\bra{v_k} &= I_V \ket{v_j} \bra{v_k} I_V\\
+	&= \left(\sum_p \ket{v_p}\bra{v_p} \right) \ket{v_j}\bra{v_k} \left(\sum_q \ket{v_q}\bra{v_q} \right)\\
+	&= \sum_{p,q} \ket{v_p} \braket{v_p|v_j}
+	\braket{v_k | v_q} \bra{v_q}\\
+	&= \sum_{p,q} \delta_{pj} \delta_{kq} \ket{v_p} \bra{v_q}
+\end{align}
+Thus
+\begin{align}
+	\left( \ket{v_j}\bra{v_k} \right)_{pq} = \delta_{pj} \delta_{kq}
+\end{align}
+
+
+
+\subsection{}
+\begin{align}
+	X = \begin{bmatrix}
+	0 & 1 \\ 
+	1 & 0
+	\end{bmatrix},\ \det(X-\lambda I) = 
+	\det \left(\begin{bmatrix}
+	-\lambda & 1 \\ 
+	1 & -\lambda
+	\end{bmatrix} \right) = 0 \Rightarrow \lambda \pm 1
+\end{align}
+
+If $\lambda = -1$,
+\begin{align}
+	\begin{bmatrix}
+		1 & 1 \\ 
+		1 & 1
+	\end{bmatrix} 
+	\begin{bmatrix}
+		c_1 \\ 
+		c_2 
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		0 \\ 
+		0 
+	\end{bmatrix}
+\end{align}
+Thus
+\begin{align}
+	\ket{\lambda = -1} = \begin{bmatrix}
+	c_1 \\ 
+	c_2 
+	\end{bmatrix} = \frac{1}{\sqrt{2}} 
+	\begin{bmatrix}
+	-1 \\ 
+	1 
+	\end{bmatrix}
+\end{align}
+
+If $\lambda = 1$
+\begin{align}
+	\ket{\lambda = 1} = \frac{1}{\sqrt{2}} 
+	\begin{bmatrix}
+	1 \\ 
+	1 
+	\end{bmatrix}
+\end{align}
+
+\begin{align}
+	X = \begin{bmatrix}
+	-1 & 0 \\ 
+	0 & 1
+	\end{bmatrix} 
+	\text{ w.r.t. } \left\{ \ket{\lambda = -1},\ \ket{\lambda = 1}\right\}
+\end{align}
+
+
+
+\subsection{}
+\begin{align}
+	\det \left(\begin{bmatrix}
+	1 & 0 \\ 
+	1 & 1
+	\end{bmatrix} - \lambda I \right) = (1 - \lambda)^2 = 0 \Rightarrow \lambda = 1
+\end{align}
+Therefore the eigenvector associated with eigenvalue $\lambda = 1$ is 
+\begin{align}
+	\ket{\lambda = 1} = \begin{bmatrix}
+	0 \\ 
+	1
+	\end{bmatrix} 
+\end{align}
+
+Because $\ket{\lambda = 1}\bra{\lambda = 1} = \begin{bmatrix}
+0 & 0 \\ 
+0 & 1
+\end{bmatrix}$, 
+\begin{align}
+	\begin{bmatrix}
+	1 & 0 \\ 
+	1 & 1
+	\end{bmatrix} \neq c\ket{\lambda = 1}\bra{\lambda = 1} = \begin{bmatrix}
+	0 & 0 \\ 
+	0 & c
+	\end{bmatrix}
+\end{align}
