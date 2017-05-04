@@ -1,1 +1,1 @@
-# Solution-for-QuantumComputationAndQuantumInformation
+# Solution for Quantum Computation and Quantum Information
