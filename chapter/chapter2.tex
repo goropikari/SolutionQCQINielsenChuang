@@ -1,7 +1,7 @@
 \setcounter{section}{1}
 \section{Introduction to quantum mechanics}
 \subsection{}
-\begin{align}
+\begin{align*}
 	\begin{bmatrix}
 		1 \\ 
 		-1
@@ -21,10 +21,10 @@
 		0 \\ 
 		0
 	\end{bmatrix}	
-\end{align}
+\end{align*}
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	A\ket{0} &= A_{11}\ket{0} + A_{21}\ket{1} = \ket{1} \Rightarrow A_{11} = 0,\ A_{21} = 1\\
 	A\ket{1} &= A_{12}\ket{0} + A_{22}\ket{1} = \ket{0} \Rightarrow A_{12} = 1,\ A_{22} = 0\\
 %
@@ -33,53 +33,61 @@
 		0 & 1 \\ 
 		1 & 0
 	\end{bmatrix} 
-\end{align}\\
+\end{align*}\\
 
-\begin{align}
+input: $\left\{\ket{0}, \ket{1}\right\}$, 
+output: $\left\{\ket{1}, \ket{0}\right\}$
+
+\begin{align*}
+	A\ket{0}&= A_{11}\ket{1} + A_{21}\ket{0} = \ket{1} \Rightarrow A_{11} = 1,\ A_{21} = 0\\
+%	
+	A\ket{1} &= A_{12}\ket{1} + A_{22}\ket{0} = \ket{0} \Rightarrow A_{12} = 0,\ A_{22} = 1\\
+%	
 	A &= 	
 	\begin{bmatrix}
 	1 & 0 \\ 
 	0 & 1
-	\end{bmatrix} \text{ w.r.t. } \left\{\ket{1},\ \ket{0} \right\}
-\end{align}
+	\end{bmatrix}
+\end{align*}
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	A \ket{v_i} &= \sum_{j} A_{ji}\ket{w_j}\\
 	B \ket{w_j} &= \sum_{k} B_{kj}\ket{x_k}
-\end{align}
+\end{align*}
 %
 Thus
-\begin{align}
+\begin{align*}
 	BA \ket{v_i} &= B \left( \sum_{j} A_{ji}\ket{w_j} \right)\\
 	&= \sum_{j} A_{ji} B\ket{w_j}\\
 	&= \sum_{j,k} A_{ji} B_{kj}\ket{x_k}\\
 	&= \sum_k \left( \sum_j B_{kj} A_{ji}  \right) \ket{x_k}\\
-	&= \sum_k (BA)_{ki} \ket{x_k}
-\end{align}
+	&= \sum_k (BA)_{ki} \ket{x_k}\\
+	\therefore& (BA)_{ki} = \sum_j B_{kj} A_{ji} 
+\end{align*}
 
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	I\ket{v_j} = \sum_i I_{ij} \ket{v_i} = \ket{v_j},\ \forall j.\\
 	\Rightarrow I_{ij} = \delta_{ij}
-\end{align}
+\end{align*}
 
 \setcounter{subsection}{5}
 \subsection{}
-\begin{align}
+\begin{align*}
 	\left(\sum_i \lambda_i \ket{w_i},\ \ket{v}\right) &=
 	\left(\ket{v},\ \sum_i \lambda_i \ket{w_i}\right)^*\\
-	&= \left[\sum_i \lambda_i \left(\ket{v},\ \ket{w_i}  \right) \right]^*\\
+	&= \left[\sum_i \lambda_i \left(\ket{v},\ \ket{w_i}  \right) \right]^* (\because \text{linearlity in the 2nd arg.})\\
 	&= \sum_i \lambda_i^* \left(\ket{v},\ \ket{w_i} \right)^*\\
 	&= \sum_i \lambda_i^* (\ket{w_i},\ \ket{v})
-\end{align}
+\end{align*}
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	\braket{w | v} &= \begin{bmatrix}
 		1 & 1
 	\end{bmatrix} 
@@ -100,36 +108,54 @@ Thus
 	1 \\ 
 	-1
 	\end{bmatrix}
-\end{align}
+\end{align*}
 
-
-\setcounter{subsection}{8}
 \subsection{}
-\begin{align}
+If $k = 1$,
+\begin{align*}
+	\ket{v_2} &= \frac{\ket{w_2} - \braket{v_1 | w_2}\ket{v_1}}{\norm{\ket{w_2} - \braket{v_1 | w_2}\ket{v_1}}}\\
+	\braket{v_1 | v_2} &= \bra{v_1} \left(\frac{\ket{w_2} - \braket{v_1 | w_2}\ket{v_1}}{\norm{\ket{w_2} - \braket{v_1 | w_2}\ket{v_1}}}\right)\\
+		&= \frac{\braket{v_1 | w_2} - \braket{v_1 | w_2}\braket{v_1 | v_1}}{\norm{\ket{w_2} - \braket{v_1 | w_2}\ket{v_1}}}\\
+		&= 0.
+\end{align*}
+
+Suppose $\left\{v_1, \cdots v_n \right\}$ $(n \leq d-1)$ is a orthonormal basis. Then
+\begin{align*}
+	\braket{v_j | v_{n+1}} &= \bra{v_j} \left(\frac{\ket{w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\ket{v_i}}{\norm{\ket{w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\ket{v_i}}}\right)~~(j \leq n)\\
+	&= \frac{\braket{v_j | w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\braket{v_j | v_i}}{\norm{\ket{w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\ket{v_i}}}\\
+	&= \frac{\braket{v_j | w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\delta_{ij}}{\norm{\ket{w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\ket{v_i}}}\\
+	&= \frac{\braket{v_j | w_{n+1}} - \braket{v_j | w_{n+1}}}{\norm{\ket{w_{n+1}} - \sum_{i=1}^{n}\braket{v_i | w_{n+1}}\ket{v_i}}}\\
+	&= 0.
+\end{align*}
+Thus Gram-Schmidt procedure produces an orthonormal basis.
+
+
+\subsection{}
+\begin{align*}
 	\sigma_0 &= I = \ket{0}\bra{0} + \ket{1}\bra{1}\\
 	\sigma_1 &= X = \ket{0}\bra{1} + \ket{1}\bra{0}\\
 	\sigma_2 &= Y = -i\ket{0}\bra{1} + i\ket{1}\bra{0}\\
 	\sigma_3 &= Z = \ket{0}\bra{0} - \ket{1}\bra{1}
-\end{align}
+\end{align*}
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	\ket{v_j}\bra{v_k} &= I_V \ket{v_j} \bra{v_k} I_V\\
 	&= \left(\sum_p \ket{v_p}\bra{v_p} \right) \ket{v_j}\bra{v_k} \left(\sum_q \ket{v_q}\bra{v_q} \right)\\
 	&= \sum_{p,q} \ket{v_p} \braket{v_p|v_j}
 	\braket{v_k | v_q} \bra{v_q}\\
 	&= \sum_{p,q} \delta_{pj} \delta_{kq} \ket{v_p} \bra{v_q}
-\end{align}
+\end{align*}
 Thus
-\begin{align}
+\begin{align*}
 	\left( \ket{v_j}\bra{v_k} \right)_{pq} = \delta_{pj} \delta_{kq}
-\end{align}
+\end{align*}
 
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	X = \begin{bmatrix}
 	0 & 1 \\ 
 	1 & 0
@@ -138,10 +164,10 @@ Thus
 	-\lambda & 1 \\ 
 	1 & -\lambda
 	\end{bmatrix} \right) = 0 \Rightarrow \lambda \pm 1
-\end{align}
+\end{align*}
 
 If $\lambda = -1$,
-\begin{align}
+\begin{align*}
 	\begin{bmatrix}
 		1 & 1 \\ 
 		1 & 1
@@ -154,9 +180,9 @@ If $\lambda = -1$,
 		0 \\ 
 		0 
 	\end{bmatrix}
-\end{align}
+\end{align*}
 Thus
-\begin{align}
+\begin{align*}
 	\ket{\lambda = -1} = \begin{bmatrix}
 	c_1 \\ 
 	c_2 
@@ -165,47 +191,47 @@ Thus
 	-1 \\ 
 	1 
 	\end{bmatrix}
-\end{align}
+\end{align*}
 
 If $\lambda = 1$
-\begin{align}
+\begin{align*}
 	\ket{\lambda = 1} = \frac{1}{\sqrt{2}} 
 	\begin{bmatrix}
 	1 \\ 
 	1 
 	\end{bmatrix}
-\end{align}
+\end{align*}
 
-\begin{align}
+\begin{align*}
 	X = \begin{bmatrix}
 	-1 & 0 \\ 
 	0 & 1
 	\end{bmatrix} 
 	\text{ w.r.t. } \left\{ \ket{\lambda = -1},\ \ket{\lambda = 1}\right\}
-\end{align}
+\end{align*}
 
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	\det \left(\begin{bmatrix}
 	1 & 0 \\ 
 	1 & 1
 	\end{bmatrix} - \lambda I \right) = (1 - \lambda)^2 = 0 \Rightarrow \lambda = 1
-\end{align}
+\end{align*}
 Therefore the eigenvector associated with eigenvalue $\lambda = 1$ is 
-\begin{align}
+\begin{align*}
 	\ket{\lambda = 1} = \begin{bmatrix}
 	0 \\ 
 	1
 	\end{bmatrix} 
-\end{align}
+\end{align*}
 
 Because $\ket{\lambda = 1}\bra{\lambda = 1} = \begin{bmatrix}
 0 & 0 \\ 
 0 & 1
 \end{bmatrix}$, 
-\begin{align}
+\begin{align*}
 	\begin{bmatrix}
 	1 & 0 \\ 
 	1 & 1
@@ -213,35 +239,35 @@ Because $\ket{\lambda = 1}\bra{\lambda = 1} = \begin{bmatrix}
 	0 & 0 \\ 
 	0 & c
 	\end{bmatrix}
-\end{align}
+\end{align*}
 
 
 
 \subsection{}
 Suppose $\ket{\psi},\ \ket{\phi}$ are arbitrary vectors in $V$.
-\begin{align}
+\begin{align*}
 	\left(\ket{\psi},\ (\ket{w}\bra{v}) \ket{\phi}\right)^* &=
 	\left((\ket{w}\bra{v})^\dagger \ket{\psi},\  \ket{\phi}\right)^*\\
 	&= \left(\ket{\phi},\ (\ket{w}\bra{v})^\dagger \ket{\psi} \right)\\
 	&= \bra{\phi} (\ket{w}\bra{v})^\dagger \ket{\psi}.
-\end{align}
+\end{align*}
 
 On the other hand,
-\begin{align}
+\begin{align*}
 	\left(\ket{\psi},\ (\ket{w}\bra{v}) \ket{\phi}\right)^* 
 	&= (\braket{\psi | w} \braket{v | \phi})^*\\
 	&= \braket{\phi | v} \braket{w | \psi}.
-\end{align}
+\end{align*}
 
 Thus
-\begin{align}
+\begin{align*}
 	\bra{\phi} (\ket{w}\bra{v})^\dagger \ket{\psi} = \braket{\phi | v} \braket{w | \psi} \text{ for arbitrary vectors } \ket{\psi},\ \ket{\phi}\\
 	\therefore (\ket{w}\bra{v})^\dagger = \ket{v}\bra{w}
-\end{align}
+\end{align*}
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	( (a_i A_i)^\dagger \ket{\phi},\ \ket{\psi} )
 	&= (\ket{\phi},\ a_i A_i \ket{\psi})\\
 	&= a_i (\ket{\phi},\ A_i \ket{\psi})\\
@@ -249,31 +275,31 @@ Thus
 	&= (a_i^* A_i^\dagger \ket{\phi},\ \ket{\psi})\\
 %	
 	\therefore (a_i A_i)^\dagger = a_i^* A_i^\dagger
-\end{align}
+\end{align*}
 
 
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	((A^\dagger)^\dagger\ket{\psi},\ \ket{\phi} )
 	&= (\ket{\psi},\ A^\dagger \ket{\phi})\\
 	&= (A^\dagger \ket{\phi},\ \ket{\psi})^*\\
 	&= (\ket{\phi},\ A\ket{\psi})^*\\
 	&= (A\ket{\psi},\ \ket{\phi})\\
 	\therefore (A^\dagger)^\dagger = A
-\end{align}
+\end{align*}
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	P &= \sum_i \ket{i}\bra{i}.\\
 	P^2 &= \left(\sum_i \ket{i}\bra{i}\right) \left(\sum_j \ket{j}\bra{j}\right)\\
 	&= \sum_{i,j} \ket{i}\braket{i | j}\bra{j}\\
 	&= \sum_i \ket{i}\bra{j} \delta_{ij}\\
 	&= \sum_i \ket{i}\bra{i}\\
 	&= P
-\end{align}
+\end{align*}
 
 
 
@@ -281,7 +307,7 @@ Thus
 \setcounter{subsection}{17}
 \subsection{}
 Suppose $\ket{v}$ is a eigenvector with corresponding eigenvalue $\lambda$.
-\begin{align}
+\begin{align*}
 	U \ket{v} &= \lambda \ket{v}.\\
 	1 &= \braket{v | v}\\
 	&= \bra{v} I \ket{v}\\
@@ -289,13 +315,13 @@ Suppose $\ket{v}$ is a eigenvector with corresponding eigenvalue $\lambda$.
 	&= \lambda \lambda^* \braket{v | v}\\
 	&= \norm{\lambda}^2\\
 	\therefore \lambda &= e^{i \theta}
-\end{align}
+\end{align*}
 
 
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	X^2 = \begin{bmatrix}
 		0 & 1 \\ 
 		1 & 0
@@ -308,19 +334,19 @@ Suppose $\ket{v}$ is a eigenvector with corresponding eigenvalue $\lambda$.
 		1 & 0 \\ 
 		0 & 1
 	\end{bmatrix} = I
-\end{align}
+\end{align*}
 
 
 
 \subsection{}
-\begin{align}
+\begin{align*}
 	U &\equiv \sum_i \ket{w_i}\bra{v_i}\\
 	A_{ij}^{'} &= \braket{v_i | A | v_j}\\
 	&= \braket{v_i | UU^\dagger A UU^\dagger | v_j}\\
 	&= \sum_{p,q,r,s} \braket{v_i | w_p} \braket{v_p | v_q} \braket{w_q | A | w_r} \braket{v_r | v_s} \braket{w_s | v_j}\\
 	&= \sum_{p,q,r,s} \braket{v_i | w_p} \delta_{pq} A_{qr}^{''} \delta_{rs}  \braket{w_s | v_j}\\
 	&= \sum_{p,r}  \braket{v_i | w_p}  \braket{w_r | v_j} A_{pr}^{''}
-\end{align}
+\end{align*}
 
 
 \setcounter{subsection}{25}
