@@ -1,8 +1,11 @@
-% uplatex soln.tex && dvipdfmx soln.dvi
-\documentclass[11pt]{ujarticle}
+% 
+% generate PDF file
+% pdflatex soln.tex
+%
+\documentclass[11pt]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb}
-\usepackage[width=16.00cm, height=25.00cm]{geometry}
+\usepackage[width=16.00cm, height=24.00cm]{geometry}
 \usepackage[dvipdfmx]{graphicx}
 \usepackage[english]{babel}
 
@@ -18,20 +21,23 @@
 
 \usepackage{braket}
 \usepackage{dsfont}
+\usepackage{ascmac}
 
 % コマンド定義
+\DeclareMathOperator{\Tr}{Tr}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm ||x||
-\newcommand{\kb}[2]{\ket{#1}\bra{#1}} % |x><y|
-
+\newcommand{\kb}[1]{\ket{#1}\hspace{-1mm} \bra{#1}} % |x><x|
+\newcommand{\kbt}[2]{\ket{#1}\hspace{-1mm} \bra{#2}} % |x><y|
+\newcommand{\Textbf}[1]{\hspace{3mm}\\ \textbf{#1}\\}
 
 
 \title{Solution for Quantum Computation and Quantum Information by Nielsen and Chuang}
-%\author{tanaka taro}
+\author{goropikari}
 \date{\today} %\date{20xx年x月x日提出}
 
 \begin{document}
 \maketitle
-\thispagestyle{empty}
+%\thispagestyle{empty}
 \setcounter{page}{0} % 表紙のページを0ページにする
 
 \tableofcontents
