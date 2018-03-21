@@ -1,4 +1,4 @@
-% 
+%
 % generate PDF file
 % pdflatex soln.tex
 %
@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage[width=16.00cm, height=24.00cm]{geometry}
-\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{graphicx, hyperref}
 \usepackage[english]{babel}
 
 %図の場所をなるべく指定した場所にする
@@ -22,6 +22,12 @@
 \usepackage{braket}
 \usepackage{dsfont}
 \usepackage{ascmac}
+\usepackage{url}
+\usepackage{hyperref} % hyper link
+\usepackage{ccicons} % creative commons license icon
+\usepackage{fancyhdr} % footer
+%\pagestyle{fancy}
+%\cfoot[\href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.]{}
 
 % コマンド定義
 \DeclareMathOperator{\Tr}{Tr}
@@ -31,14 +37,18 @@
 \newcommand{\Textbf}[1]{\hspace{3mm}\\ \textbf{#1}\\}
 
 
-\title{Solution for Quantum Computation and Quantum Information by Nielsen and Chuang}
+\title{Solution for "Quantum Computation and Quantum Information: 10th Anniversary Edition" by Nielsen and Chuang}
 \author{goropikari}
-\date{\today} %\date{20xx年x月x日提出}
+\date{\today}
 
 \begin{document}
 \maketitle
-%\thispagestyle{empty}
+\thispagestyle{empty}
 \setcounter{page}{0} % 表紙のページを0ページにする
+
+\section*{Copylight Notice:}
+\ccbyncsa\\
+This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
 
 \tableofcontents
 \newpage
@@ -46,7 +56,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \include{chapter/chapter2}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

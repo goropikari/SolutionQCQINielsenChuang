@@ -745,66 +745,66 @@ Suppose $A = \begin{bmatrix}
 \end{align*}
 
 Eigenvalues of $A$ are $\lambda = 1, ~ 7$.
-Corresponding eigenvectors are 
+Corresponding eigenvectors are
 $
 	\ket{\lambda = 1} = \frac{1}{\sqrt{2}} \begin{bmatrix}
 	1 \\ 
 	-1
-	\end{bmatrix} 
-$, 
+	\end{bmatrix}
+$,
 $
 	\ket{\lambda = 7} = \frac{1}{\sqrt{2}} \begin{bmatrix}
 1 \\ 
 1
-\end{bmatrix} 
+\end{bmatrix}
 $.
 
 \vspace{5mm}
-Thus 
+Thus
 \begin{align*}
 	A = \kb{\lambda = 1} + 7 \kb{\lambda = 7}.
 \end{align*}
- 
+
 \begin{align*}
 	\sqrt{A} &= \kb{\lambda = 1} + \sqrt{7} \kb{\lambda = 7}\\
 		&= \frac{1}{2} \begin{bmatrix}
 		1 & -1 \\ 
 		-1 & 1
-		\end{bmatrix} 
+		\end{bmatrix}
 		+
 		\frac{\sqrt{7}}{2} \begin{bmatrix}
 		1 & 1 \\ 
 		1 & 1
 		\end{bmatrix}\\
-		&= 
+		&=
 		\frac{1}{2}
 		 \begin{bmatrix}
 			1+\sqrt{7} & -1+\sqrt{7} \\ 
 			-1 + \sqrt{7} & 1+\sqrt{7}
-		\end{bmatrix} 
+		\end{bmatrix}
 \end{align*}
- 
+
  \begin{align*}
  	\log (A) &=  \log (1) \kb{\lambda = 1} + \log (7) \kb{\lambda = 7}\\
  		&= \frac{\log (7)}{2} \begin{bmatrix}
 	 		1 & 1 \\ 
 	 		1 & 1
- 		\end{bmatrix} 
+ 		\end{bmatrix}
  \end{align*}
- 
- 
- 
+
+
+
 \Textbf{2.35}
 \begin{align*}
 	\vec{v} \cdot \vec{\sigma} &= \sum_{i=1}^3 v_i \sigma_i\\
 		&= v_1 \begin{bmatrix}
 		0 & 1 \\ 
 		1 & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 		+ v_2 \begin{bmatrix}
 		0 & -i \\ 
 		i & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 		+ v_3 \begin{bmatrix}
 		1 & 0 \\ 
 		0 & -1
@@ -812,7 +812,7 @@ Thus
 		&= \begin{bmatrix}
 		v_3 & v_1 - i v_2 \\ 
 		v_1 + iv_2 & -v_3
-		\end{bmatrix} 
+		\end{bmatrix}
 \end{align*}
 
 \begin{align*}
@@ -839,9 +839,9 @@ Thus
 \end{align*}
 
 $\because$ Since $\vec{v} \cdot \vec{\sigma}$ is Hermitian, $\ket{\lambda_1}$ and $\ket{\lambda_{-1}}$ are orthogonal.
-Thus 
+Thus
 \begin{align*}
-	\kb{\lambda_1} + \ket{\lambda_{-1}} = I.
+	\kb{\lambda_1} + \kb{\lambda_{-1}} = I.
 \end{align*}
 
 
@@ -851,21 +851,21 @@ Thus
 		\begin{bmatrix}
 		0 & 1 \\ 
 		1 & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 	\right) = 0\\
-%	
+%
 	\Tr (\sigma_2) &= \Tr \left(
 		\begin{bmatrix}
 		0 & -i \\ 
 		i & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 	\right) = 0\\
-%	
+%
 	\Tr (\sigma_3) &= \Tr \left(
 	\begin{bmatrix}
 		1 & 0 \\ 
 		0 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	\right) = 1 -1 = 0\\
 \end{align*}
 
@@ -935,7 +935,7 @@ Since $A^\dagger A$ is positive, $\braket{ i | A^\dagger A | i } \geq 0$ for all
 
 
 Let $a_i$ be i-th column of $A$.
-If $\braket{ i | A^\dagger A | i } = 0$, then 
+If $\braket{ i | A^\dagger A | i } = 0$, then
 \begin{align*}
 	\braket{ i | A^\dagger A | i } = a^\dagger_i a_i = \norm{a_i}^2 = 0 \text{ iff }a_i = \mathbf{0}.
 \end{align*}
@@ -951,17 +951,17 @@ Therefore $(A, A) = 0$ iff $A = \mathbf{0}$.
 %\begin{bmatrix}
 %	0 & 1 \\ 
 %	1 & 0
-%\end{bmatrix} 
+%\end{bmatrix}
 %
 %\begin{bmatrix}
 %	0 & -i \\ 
 %	i & 0
-%\end{bmatrix} 
+%\end{bmatrix}
 %
 %\begin{bmatrix}
 %	1 & 0 \\ 
 %	0 & -1
-%\end{bmatrix} 
+%\end{bmatrix}
 
 \Textbf{2.40}
 \begin{align*}
@@ -969,41 +969,41 @@ Therefore $(A, A) = 0$ iff $A = \mathbf{0}$.
 		&= \begin{bmatrix}
 		0 & 1 \\ 
 		1 & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 		\begin{bmatrix}
 		0 & -i \\ 
 		i & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 		-
 		\begin{bmatrix}
 		0 & -i \\ 
 		i & 0
-		\end{bmatrix} 
+		\end{bmatrix}
 		\begin{bmatrix}
 		0 & 1 \\ 
 		1 & 0
 		\end{bmatrix} \\
-%		
+%
 		&=
-%		
+%
 		\begin{bmatrix}
 			i & 0 \\ 
 			0 & -i
-		\end{bmatrix} 
+		\end{bmatrix}
 		-
 		\begin{bmatrix}
 			-i & 0 \\ 
 			0 & i
 		\end{bmatrix}\\
-%		
+%
 		&=
-%		
+%
 		\begin{bmatrix}
 			2i & 0 \\ 
 			0 & -2i
 		\end{bmatrix} \\
-%		
-		&=	2i Z			
+%
+		&=	2i Z
 \end{align*}
 
 
@@ -1012,16 +1012,16 @@ Therefore $(A, A) = 0$ iff $A = \mathbf{0}$.
 	\left[Y, Z \right] &= \begin{bmatrix}
 		0 & -i \\ 
 		i & 0
-	\end{bmatrix} 
+	\end{bmatrix}
 	\begin{bmatrix}
 		1 & 0 \\ 
 		0 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	-
 	\begin{bmatrix}
 		1 & 0 \\ 
 		0 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	\begin{bmatrix}
 		0 & -i \\ 
 		i & 0
@@ -1031,7 +1031,7 @@ Therefore $(A, A) = 0$ iff $A = \mathbf{0}$.
 		0 & 2i \\ 
 		2i & 0
 	\end{bmatrix}\\
-	&= 2iX	
+	&= 2iX
 \end{align*}
 
 
@@ -1040,11 +1040,11 @@ Therefore $(A, A) = 0$ iff $A = \mathbf{0}$.
 	\left[Z, X\right] &= \begin{bmatrix}
 	1 & 0 \\ 
 	0 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	\begin{bmatrix}
 	0 & 1 \\ 
 	1 & 0
-	\end{bmatrix} 
+	\end{bmatrix}
 	-
 	\begin{bmatrix}
 	0 & 1 \\ 
@@ -1070,34 +1070,34 @@ Therefore $(A, A) = 0$ iff $A = \mathbf{0}$.
 &= \begin{bmatrix}
 0 & 1 \\ 
 1 & 0
-\end{bmatrix} 
+\end{bmatrix}
 \begin{bmatrix}
 0 & -i \\ 
 i & 0
-\end{bmatrix} 
+\end{bmatrix}
 +
 \begin{bmatrix}
 0 & -i \\ 
 i & 0
-\end{bmatrix} 
+\end{bmatrix}
 \begin{bmatrix}
 0 & 1 \\ 
 1 & 0
 \end{bmatrix} \\
-%		
+%
 &=
-%		
+%
 \begin{bmatrix}
 i & 0 \\ 
 0 & -i
-\end{bmatrix} 
+\end{bmatrix}
 +
 \begin{bmatrix}
 -i & 0 \\ 
 0 & i
 \end{bmatrix}\\
-%		
-&= 0		
+%
+&= 0
 \end{align*}
 
 
@@ -1106,16 +1106,16 @@ i & 0 \\
 \left\{\sigma_2, \sigma_3 \right\} &= \begin{bmatrix}
 0 & -i \\ 
 i & 0
-\end{bmatrix} 
+\end{bmatrix}
 \begin{bmatrix}
 1 & 0 \\ 
 0 & -1
-\end{bmatrix} 
+\end{bmatrix}
 +
 \begin{bmatrix}
 1 & 0 \\ 
 0 & -1
-\end{bmatrix} 
+\end{bmatrix}
 \begin{bmatrix}
 0 & -i \\ 
 i & 0
@@ -1129,11 +1129,11 @@ i & 0
 \left\{\sigma_3, \sigma_1 \right\} &= \begin{bmatrix}
 1 & 0 \\ 
 0 & -1
-\end{bmatrix} 
+\end{bmatrix}
 \begin{bmatrix}
 0 & 1 \\ 
 1 & 0
-\end{bmatrix} 
+\end{bmatrix}
 +
 \begin{bmatrix}
 0 & 1 \\ 
@@ -1148,17 +1148,17 @@ i & 0
 
 \begin{align*}
 	\sigma_0^2 &= I^2 = I\\
-%	
+%
 	\sigma_1^2 &= \begin{bmatrix}
 	0 & 1 \\ 
 	1 & 0
 	\end{bmatrix} ^2 = I\\
-%	
+%
 	\sigma_2^2 &= \begin{bmatrix}
 	0 & -i \\ 
 	i & 0
 	\end{bmatrix} ^2 = I\\
-%	
+%
 	\sigma_3^2 &= \begin{bmatrix}
 	1 & 0 \\ 
 	0 & -1
@@ -1250,12 +1250,12 @@ Thus $H = U\sqrt{H^2}$.
 
 \begin{screen}
 	In general, $H \neq \sqrt{H^2}$.
-	
+
 	From spectral decomposition, $H = \sum_i \lambda_i \kb{i}$, $\lambda_i \in \mathds{R}$.
 	\begin{align*}
-		 \sqrt{H^2} = \sqrt{ \sum_i \lambda_i^2 \kb{i} } 
-		 = 
- 		\sum_i 
+		 \sqrt{H^2} = \sqrt{ \sum_i \lambda_i^2 \kb{i} }
+		 =
+ 		\sum_i
  			\sqrt{
  				\lambda_i^2
 			} \kb{i}
@@ -1276,7 +1276,7 @@ Normal matrix is diagonalizable, $A = \sum_i \lambda_i \kb{i}$.
 
 \Textbf{2.50}
 
-Define 
+Define
 $A = \begin{bmatrix}
 1 & 0 \\ 
 1 & 1
@@ -1288,27 +1288,27 @@ $A^\dagger A = \begin{bmatrix}
 \end{bmatrix}$.
 
  Characteristic equation of $A^\dagger A$ is $\det(A^\dagger A - \lambda I) = \lambda^2 - 3 \lambda + 1$.
- Eigenvalues of $A^\dagger A$ are $\lambda_\pm = \frac{3 \pm \sqrt{5}}{2}$ 
+ Eigenvalues of $A^\dagger A$ are $\lambda_\pm = \frac{3 \pm \sqrt{5}}{2}$
  and associated eigenvectors are $\ket{\lambda_\pm} = \frac{1}{\sqrt{10 \mp 2 \sqrt{5}}} \begin{bmatrix}
  2 \\ 
  -1 \pm \sqrt{5}
  \end{bmatrix} $.
- 
+
 \begin{align*}
 	A^\dagger A = \lambda_+ \kb{\lambda_+} + \lambda_- \kb{\lambda_-}.
 \end{align*}
- 
+
  \begin{align*}
  	J = \sqrt{A^\dagger A} &= \sqrt{\lambda_+} \kb{\lambda_+} + \sqrt{\lambda_-} \kb{\lambda_-}\\
  		&= \sqrt{\frac{3 + \sqrt{5}}{2}} \cdot \frac{5 - \sqrt{5}}{40} \begin{bmatrix}
  		4 & 2\sqrt{5} -2 \\ 
  		2 \sqrt{5} - 2 & 6 -2\sqrt{5}
- 		\end{bmatrix} 
+ 		\end{bmatrix}
  		+
  		\sqrt{\frac{3 - \sqrt{5}}{2}} \cdot \frac{5 + \sqrt{5}}{40} \begin{bmatrix}
  		4 & -2\sqrt{5} -2 \\ 
  		-2 \sqrt{5} - 2 & 6 +2\sqrt{5}
- 		\end{bmatrix} 
+ 		\end{bmatrix}
  \end{align*}
 
 
@@ -1333,16 +1333,16 @@ I'm tired.
 	\frac{1}{\sqrt{2}} \begin{bmatrix}
 	1 & 1 \\ 
 	1 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	=
 	\frac{1}{\sqrt{2}} \begin{bmatrix}
 	1 & 1 \\ 
 	1 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	\frac{1}{\sqrt{2}} \begin{bmatrix}
 	1 & 1 \\ 
 	1 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	=
 	\frac{1}{2} \begin{bmatrix}
 	2 & 0 \\ 
@@ -1364,7 +1364,7 @@ I'm tired.
 	\frac{1}{\sqrt{2}} \begin{bmatrix}
 	1 & 1 \\ 
 	1 & -1
-	\end{bmatrix} 
+	\end{bmatrix}
 	=
 	H.
 \end{align*}
@@ -1392,13 +1392,226 @@ Eigenvalues are $\lambda_\pm = \pm 1$ and associated eigenvectors are $\ket{\lam
 
 
 \Textbf{2.54}
+Since $[A, B] = 0$, $A$ and $B$ are simultaneously diagonalize, $A = \sum_i a_i \kb{i}$, $B = \sum_i b_i \kb{i}$.
+\begin{align*}
+	\exp (A) \exp (B) &= \left(\sum_i \exp (a_i) \kb{i}\right) \left(\sum_i \exp (b_i) \kb{i}\right) \\
+		&= \sum_{i,j} \exp (a_i + b_j) \ket{i} \braket{i | j} \bra{j}\\
+		&= \sum_{i,j} \exp (a_i + b_j) \kbt{i}{j} \delta_{i, j}\\
+		&= \sum_i \exp (a_i +  b_i) \kb{i}\\
+		&= \exp (A+B)
+\end{align*}
+
+
 \Textbf{2.55}
+\begin{align*}
+	H = \sum_E E \kb{E}
+\end{align*}
+
+\begin{align*}
+	U(t_2 - t_1) U^\dagger (t_2 - t_1) &= \exp \left( - \frac{iH(t_2 - t_1)}{\hbar} \right)  \exp \left(  \frac{iH(t_2 - t_1)}{\hbar} \right)\\
+		&= \sum_{E, E'} \left(\exp \left(- \frac{iE(t_2 - t_1)}{\hbar} \right) \kb{E} \right)
+										\left(\exp \left(- \frac{iE'(t_2 - t_1)}{\hbar} \right) \kb{E'} \right)\\
+		&= \sum_{E, E'} \left(\exp \left(- \frac{i(E-E')(t_2 - t_1)}{\hbar} \right) \kbt{E}{E'} \delta_{E,E'} \right) \\
+		&= \sum_E \exp(0) \kb{E}\\
+		&= \sum_E \kb{E}\\
+		&= I
+\end{align*}
+
+Similarly, $U^\dagger (t_2 - t_1) U (t_2 - t_1) = I$.
+
+
+
 \Textbf{2.56}
+
+$U = \sum_i \lambda_i \kb{\lambda_i}$~~~ ($|\lambda_i| = 1$).
+\begin{align*}
+	\log (U) &= \sum_j \log (\lambda_j) \kb{\lambda_j} = \sum_j i \theta_j  \kb{\lambda_j} \text{ where } \theta_j = \arg (\lambda_j)\\
+	K &= - i \log(U) = \sum_j \theta_j \kb{\lambda_j}.
+\end{align*}
+
+\begin{align*}
+	K^\dagger = (-i \log U)^\dagger = \left(\sum_j \theta_j \kb{\lambda_j}\right)^\dagger
+	= \sum_j \theta_j^* \kb{\lambda_j} = \sum_j \theta_j \kb{\lambda_j} = K
+\end{align*}
+
+
+
 \Textbf{2.57}
+\begin{align*}
+	&\ket{\phi} \equiv \frac{L_l \ket{\psi}}{\sqrt{\braket{\psi |L_l^\dagger L_l | \psi}}}\\
+	&\braket{\phi | M_m^\dagger M_m | \phi} = \frac{\braket{\psi | L_l^\dagger M_m^\dagger M_m L_l | \psi}}{\braket{\psi | L_l^\dagger L_l | \psi}} \\
+%
+	&\frac{M_m \ket{\phi}}{\sqrt{\braket{\phi | M_m^\dagger M_m | \phi}}} =
+		\frac{M_m L_l \ket{\psi}}{\sqrt{\braket{\psi |L_l^\dagger L_l | \psi}}}
+		\cdot
+		\frac{ \sqrt{\braket{\psi | L_l^\dagger L_l | \psi}} }{ \sqrt{\braket{\psi | L_l^\dagger M_m^\dagger M_m L_l | \psi}} }
+		=
+		\frac{M_m L_l \ket{\psi}}{ \sqrt{\braket{\psi | L_l^\dagger M_m^\dagger M_m L_l | \psi}} }
+		=
+		\frac{N_{lm} \ket{\psi}}{\sqrt{\braket{\psi |N^\dagger_{lm}  N_{lm}  | \psi}}}
+\end{align*}
+
+
+
 \Textbf{2.58}
+\begin{align*}
+	\braket{M} &= \braket{ \psi | M | \psi} = \braket{\psi | m | \psi} = m \braket{\psi | \psi} = m\\
+	\braket{M^2} &= \braket{ \psi | M^2 | \psi} = \braket{\psi | m^2 | \psi} = m^2 \braket{\psi | \psi} = m^2\\
+	\text{deviation} &= \braket{M^2} - \braket{M}^2 = m^2 - m^2 = 0.
+\end{align*}
+
+
 \Textbf{2.59}
+\begin{align*}
+	\braket{X} &= \braket{0 | X | 0} = \braket{0 | 1} = 0\\
+	\braket{X^2} &= \braket{0 | X^2 | 0} = \braket{0 | X | 1} =\braket{0 | 0} = 1\\
+	\text{standard deviation} &= \sqrt{ \braket{X^2} - \braket{X}^2 } = 1
+\end{align*}
+
+
 \Textbf{2.60}
+\begin{align*}
+\vec{v} \cdot \vec{\sigma} &= \sum_{i=1}^3 v_i \sigma_i\\
+&= v_1 \begin{bmatrix}
+0 & 1 \\ 
+1 & 0
+\end{bmatrix}
++ v_2 \begin{bmatrix}
+0 & -i \\ 
+i & 0
+\end{bmatrix}
++ v_3 \begin{bmatrix}
+1 & 0 \\ 
+0 & -1
+\end{bmatrix} \\
+&= \begin{bmatrix}
+v_3 & v_1 - i v_2 \\ 
+v_1 + iv_2 & -v_3
+\end{bmatrix}
+\end{align*}
+
+\begin{align*}
+\det (\vec{v} \cdot \vec{\sigma}  - \lambda I) &= (v_3 - \lambda) (-v_3 - \lambda) - (v_1 - iv_2) (v_1 + iv_2)\\
+&= \lambda^2 - (v_1^2 + v_2^2  + v_3^2)\\
+&= \lambda^2 - 1 ~~~ (\because |\vec{v}| = 1)
+\end{align*}
+Eigenvalues are $\lambda = \pm 1$.
+
+
+(i) if $\lambda = 1$
+\begin{align*}
+	\vec{v} \cdot \vec{\sigma}  - \lambda I &= \vec{v} \cdot \vec{\sigma}  - I\\	
+		&= \begin{bmatrix}
+		v_3 - 1 & v_1 - i v_2 \\ 
+		v_1 + i v_2 & - v_3 - 1
+		\end{bmatrix}
+\end{align*}
+
+Eigenvector is $\ket{\lambda_1} = \sqrt{ \frac{1+v_3}{2 }} \begin{bmatrix}
+1 \\ 
+\frac{1-v_3}{v_1 - iv_2}
+\end{bmatrix} $.
+
+\begin{align*}
+	\kb{\lambda_1} &= \frac{1+v_3}{2 } \begin{bmatrix}
+		1 \\ 
+		\frac{1-v_3}{v_1 - iv_2}
+		\end{bmatrix}
+		\begin{bmatrix}
+		1 &
+		\frac{1-v_3}{v_1 + iv_2}
+		\end{bmatrix}\\
+%
+	&=
+	 \frac{1+v_3}{2 } \begin{bmatrix}
+	 1 & \frac{v_1 - iv_2}{1 + v_3} \\ 
+	 \frac{v_1 + iv_2}{1 + v_3} & \frac{1-v_3}{1+v_3}
+	 \end{bmatrix} \\
+	 &=
+	 \frac{1}{2} \begin{bmatrix}
+	 1+v_3 & v_1 - iv_2 \\ 
+	 v_1 + iv_2 & 1 - v_3
+	 \end{bmatrix} \\
+	 &=
+	  \frac{1}{2} \left( I + \begin{bmatrix}
+	 v_3 & v_1 - iv_2 \\ 
+	 v_1 + iv_2 & - v_3
+	 \end{bmatrix} \right) \\
+	 &=
+	 \frac{1}{2} (I + \vec{v} \cdot \vec{\sigma} )
+\end{align*}
+
+
+
+(ii) If $\lambda = -1$.
+\begin{align*}
+	\vec{v} \cdot \vec{\sigma}  - \lambda I &= \vec{v} \cdot \vec{\sigma}  + I\\	
+	&= \begin{bmatrix}
+		v_3 + 1 & v_1 - i v_2 \\ 
+		v_1 + i v_2 & - v_3 + 1
+	\end{bmatrix}
+\end{align*}
+
+Eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{bmatrix}
+1 \\ 
+- \frac{1+v_3}{v_1 - iv_2}
+\end{bmatrix} $.
+
+
+\begin{align*}
+	\kb{\lambda_{-1}} &= \frac{1 - v_3}{2} \begin{bmatrix}
+	1 \\ 
+	- \frac{1+v_3}{v_1 - iv_2}
+	\end{bmatrix}
+	\begin{bmatrix}
+		1 & - \frac{1+v_3}{v_1 + iv_2}
+	\end{bmatrix}\\
+	&=
+	\frac{1 - v_3}{2} \begin{bmatrix}
+		1 & - \frac{v_1 - iv_2}{1 - v_3} \\ 
+		- \frac{v_1 + iv_2}{1 - v_3} & \frac{1+v_3}{1 - v_3}
+	\end{bmatrix} \\
+	&=
+	\frac{1}{2} \begin{bmatrix}
+		1 - v_3 & -(v_1 - iv_2) \\ 
+		- (v_1 + iv_2) & 1 + v_3
+	\end{bmatrix} \\
+	&=
+	\frac{1}{2} \left( I - \begin{bmatrix}
+		v_3 & v_1 - iv_2 \\ 
+		(v_1 + iv_2 & - v_3
+	\end{bmatrix} \right)\\
+	&= \frac{1}{2} (I - \vec{v} \cdot \vec{\sigma} ).
+\end{align*}
+
+
+
 \Textbf{2.61}
+\begin{align*}
+	\braket{\lambda_1 | 0} \braket{0 | \lambda_1} &= \braket{0 | \lambda_1} \braket{\lambda_1 | 0}\\
+		&= \braket{0 | \frac{1}{2} ( I + \vec{v} \cdot \vec{\sigma} ) | 0}\\
+		&= \frac{1}{2} (1 + v_3)
+\end{align*}
+
+Post-measurement state is
+\begin{align*}
+	\frac{\ket{\lambda_1} \braket{\lambda_1 | 0}}{ \sqrt{\braket{0 | \lambda_1} \braket{\lambda_1 | 0}} } &= \frac{1}{\sqrt{\frac{1}{2} (1 + v_3)}}
+	\cdot \frac{1}{2}
+	\begin{bmatrix}
+		1 + v_3 \\ 
+		v_1 + iv_2
+	\end{bmatrix} \\
+		&= \sqrt{ \frac{1}{2}  (1 + v_3) } \begin{bmatrix}
+		1 \\ 
+		\frac{v_1 + iv_2}{1+v_3}
+		\end{bmatrix} \\
+		&=  \sqrt{ \frac{1 + v_3}{2} } \begin{bmatrix}
+		1 \\ 
+		\frac{1 - v_3}{v_1 - iv_2}
+		\end{bmatrix} \\
+		&= \ket{\lambda_1}.
+\end{align*}
+
 \Textbf{2.62}
 \Textbf{2.63}
 \Textbf{2.64}

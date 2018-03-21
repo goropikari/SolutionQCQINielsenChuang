@@ -1,5 +1,17 @@
 # Solution for Quantum Computation and Quantum Information
 
+This is unofficial solution for "Quantum Computation and Quantum Information: 10th Anniversary Edition" (ISBN-13: 978-1107002173) by Nielsen and Chuang
+
+There is no guarantee that these solutions are correct.
+
+
+## License
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+## Solved execises
+
+### Chapter 2
+
 - [x] 2.1
 - [x] 2.2
 - [x] 2.3
@@ -56,12 +68,12 @@
 - [x] 2.54
 - [x] 2.55
 - [x] 2.56
-- [ ] 2.57
-- [ ] 2.58
-- [ ] 2.59
-- [ ] 2.60
-- [ ] 2.61
-- [ ] 2.62
+- [x] 2.57
+- [x] 2.58
+- [x] 2.59
+- [x] 2.60
+- [x] 2.61
+- [x] 2.62
 - [ ] 2.63
 - [ ] 2.64
 - [ ] 2.65
