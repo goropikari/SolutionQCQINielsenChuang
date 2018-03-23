@@ -50,7 +50,7 @@ There is no guarantee that these solutions are correct.
 - [x] 2.36
 - [x] 2.37
 - [x] 2.38
-- [x] 2.39
+- [] 2.39 partialy solved
 - [x] 2.40
 - [x] 2.41
 - [x] 2.42
@@ -74,12 +74,12 @@ There is no guarantee that these solutions are correct.
 - [x] 2.60
 - [x] 2.61
 - [x] 2.62
-- [ ] 2.63
-- [ ] 2.64
-- [ ] 2.65
-- [ ] 2.66
-- [ ] 2.67
-- [ ] 2.68
+- [x] 2.63
+- [x] 2.64
+- [x] 2.65
+- [x] 2.66
+- [x] 2.67 unsolved
+- [x] 2.68
 - [ ] 2.69
 - [ ] 2.70
 - [ ] 2.71
