@@ -80,10 +80,10 @@ There is no guarantee that these solutions are correct.
 - [x] 2.66
 - [x] 2.67 unsolved
 - [x] 2.68
-- [ ] 2.69
-- [ ] 2.70
-- [ ] 2.71
-- [ ] 2.72
+- [x] 2.69
+- [x] 2.70
+- [x] 2.71
+- [x] 2.72
 - [ ] 2.73
 - [ ] 2.74
 - [ ] 2.75
