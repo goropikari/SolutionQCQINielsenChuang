@@ -1641,7 +1641,7 @@ Thus the measurement is a projective measurement.
         &= \sqrt{E_m} I \sqrt{E_m}\\
         &= E_m.
 \end{align*}
- 
+
 Since $E_m$ is POVM,  for arbitrary  unitary $U$, $M_m^\dagger M_m$ is POVM.
 
 
@@ -1666,8 +1666,8 @@ And $\braket{\psi_i | E_i | \psi_i} = \braket{\psi_i | \psi_i} \braket{\psi_i | 
 
 
 \begin{align*}
-     \braket{X_1 Z_2} = \left(\frac{\bra{00} + \bra{11}}{\sqrt{2}} \right) X_1 Z_2 \left(\frac{\ket{00} + \ket{11}}{\sqrt{2}} \right) 
-    = \frac{\bra{00} + \bra{11}}{\sqrt{2}}  \cdot \frac{\ket{10} - \ket{01}}{\sqrt{2}} 
+     \braket{X_1 Z_2} = \left(\frac{\bra{00} + \bra{11}}{\sqrt{2}} \right) X_1 Z_2 \left(\frac{\ket{00} + \ket{11}}{\sqrt{2}} \right)
+    = \frac{\bra{00} + \bra{11}}{\sqrt{2}}  \cdot \frac{\ket{10} - \ket{01}}{\sqrt{2}}
     = 0
 \end{align*}
 
@@ -1700,7 +1700,7 @@ Suppose $\ket{a} = a_0 \ket{0}  + a_1\ket{1}$ and $\ket{b} = b_0 \ket{0}  + b_1\
     \ket{a} \ket{b} = a_0 b_0 \ket{00} + a_0 b_1 \ket{01} + a_1 b_0 \ket{10} + a_1 b_1 \ket{11}.
 \end{align*}
 
-If $\ket{\psi} = \ket{a} \ket{b}$, then $a_0 b_0 = 1,~ a_0 b_1=0,~ a_1 b_0 = 0,~ a_1 b_1 = 1$ since $\{\ket{ij}\}$ is an orthonormal basis. 
+If $\ket{\psi} = \ket{a} \ket{b}$, then $a_0 b_0 = 1,~ a_0 b_1=0,~ a_1 b_0 = 0,~ a_1 b_1 = 1$ since $\{\ket{ij}\}$ is an orthonormal basis.
 
 If $a_0 b_1 = 0$, then $a_0 = 0$ or $b_1 = 0$.
 
@@ -1806,7 +1806,7 @@ Conversely if $\rho$ is pure, then $\rho = \kb{\psi}$.
 \Textbf{2.72}
 (1)
 
-Since density matrix is Hermitian, matrix representation is 
+Since density matrix is Hermitian, matrix representation is
 $\rho = \begin{bmatrix}
 a & b \\ b^* & d
 \end{bmatrix}$,
@@ -1820,11 +1820,11 @@ In this case,
     \rho = \begin{bmatrix}
         a & b \\ b^* & d
     \end{bmatrix}
-    = 
+    =
     \frac{1}{2} \begin{bmatrix}
         1+r_3 & r_1 - ir_2 \\ 
         r_1 + ir_2 & 1 - r_3
-    \end{bmatrix} 
+    \end{bmatrix}
     =
     \frac{1}{2} (I + \vec{r} \cdot \vec{\sigma}).
 \end{align*}
@@ -1873,7 +1873,63 @@ Conversely, if $|\vec{r}| = 1$, then $\Tr (\rho^2) = \frac{1}{4} (2 + 2|\vec{r}|
 
 
 \Textbf{2.73}
+\begin{screen}
+    \Textbf{Theorem 2.6}
+%
+    \begin{align*}
+        \rho = \sum_i p_i \kb{\psi_i} = \sum_i \kb{\tilde{\psi_i}} = \sum_j \kb{\tilde{\varphi}_j} = \sum_j q_j \kb{\varphi_j} ~~ \Leftrightarrow ~~ \ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}
+    \end{align*}
+    where $u$ is unitary.
+
+	Transformation in theorem 2.6, $\ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}$, corresponds to
+	\begin{align*}
+	    \left[ \ket{\tilde{\psi}_1} \cdots \ket{\tilde{\psi}_k} \right] = \Big[ \ket{\tilde{\varphi}_1} \cdots \ket{\tilde{\varphi}_k} \Big] U^T
+	\end{align*}
+	where $k = \mathrm{rank} (\mathcal{\rho})$.
+\end{screen}
+
+From spectral theorem, density matrix $\rho$ is decomposed as $\rho = \sum_{k=1}^{d} \lambda_k \kb{k}$ where $d = \dim \mathcal{H}$.
+Without loss of generality, we can assume $p_k > 0$ for $k = 1 \cdots , l$ where $l = \mathrm{rank} (\rho)$ and $p_k = 0$ for $k = l+1, \cdots, d$.
+Thus $\rho = \sum_{k=1}^{l} p_k \kb{k} = \sum_{k=1}^{l} \kb{\tilde{k}}$, where $\ket{\tilde{k}} = \sqrt{\lambda_k} \ket{k}$.
+
+Suppose $\ket{\psi_i}$ is a state in support $\rho$. Then
+\begin{align*}
+	\ket{\psi_i} = \sum_{k=1}^l c_{ik} \ket{k}, ~~ \sum_k |c_{ik}|^2 = 1.
+\end{align*}
+
+Define $\displaystyle p_i = \frac{1}{\sum_k \frac{|c_{ik}|^2}{\lambda_k} }$ and $\displaystyle u_{ik} = \frac{\sqrt{p_i} c_{ik}}{\sqrt{\lambda_k}}$.
+
+Now
+\begin{align*}
+	\sum_k |u_{ik}|^2 = \sum_k \frac{p_i | c_{ik} |^2 }{\lambda_k} = p_i \sum_k \frac{| c_{ik} |^2 }{\lambda_k} = 1.
+\end{align*}
+
+Next prepare an unitary operator such that $(i, k)$ component of $U$ is $u_{ik}$.
+Then we can define another ensemble such that
+\begin{align*}
+	\Big[  \ket{\tilde{\psi}_1} \cdots  \ket{\tilde{\psi}_i} \cdots \ket{\tilde{\psi}_l}\Big] = \Big[ \ket{\tilde{k}_1} \cdots \ket{\tilde{k}_l} \Big] U^T
+\end{align*}
+where $\ket{\tilde{\psi_i}} = \sqrt{p_i} \ket{\psi_i}$.
+From theorem 2.6,
+\begin{align*}
+	\rho = \sum_k \kb{\tilde{k}} = \sum_k \kb{\tilde{\psi}_k}.
+\end{align*}
+
+Therefore we can obtain a minimal ensemble for $\rho$ that contains $\ket{\psi_i}$.
+
+Moreover since $\rho^{-1} = \sum_k \frac{1}{\lambda_k} \kb{k}$,
+\begin{align*}
+	\braket{\psi_i | \rho^{-1} | \psi_i} = \sum_k \frac{1}{\lambda_k} \braket{\psi_i | k} \hspace{-1mm} \braket{k | \psi_i} = \sum_k \frac{|c_{ik}|^2}{\lambda_k} = \frac{1}{p_i}.
+\end{align*}
+
+Hence, $ \frac{1}{\braket{\psi_i | \rho^{-1} | \psi_i}} = p_i $.
+
+
 \Textbf{2.74}
+
+
+
+
 \Textbf{2.75}
 \Textbf{2.76}
 \Textbf{2.77}

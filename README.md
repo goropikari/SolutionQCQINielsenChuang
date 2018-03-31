@@ -84,7 +84,7 @@ There is no guarantee that these solutions are correct.
 - [x] 2.70
 - [x] 2.71
 - [x] 2.72
-- [ ] 2.73
+- [x] 2.73
 - [ ] 2.74
 - [ ] 2.75
 - [ ] 2.76
