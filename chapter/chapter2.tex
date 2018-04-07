@@ -216,7 +216,6 @@ Thus Gram-Schmidt procedure produces an orthonormal basis.
 
 
 \Textbf{2.9}
-
 \begin{align*}
 	\sigma_0 &= I = \ket{0}\bra{0} + \ket{1}\bra{1}\\
 	\sigma_1 &= X = \ket{0}\bra{1} + \ket{1}\bra{0}\\
@@ -226,7 +225,6 @@ Thus Gram-Schmidt procedure produces an orthonormal basis.
 
 
 \Textbf{2.10}
-
 \begin{align*}
 	\ket{v_j}\bra{v_k} &= I_V \ket{v_j} \bra{v_k} I_V\\
 	&= \left(\sum_p \ket{v_p}\bra{v_p} \right) \ket{v_j}\bra{v_k} \left(\sum_q \ket{v_q}\bra{v_q} \right)\\
@@ -242,7 +240,6 @@ Thus
 
 
 \Textbf{2.11}
-
 \begin{align*}
 	X = \begin{bmatrix}
 	0 & 1 \\ 
@@ -301,7 +298,6 @@ If $\lambda = 1$
 
 
 \Textbf{2.12}
-
 \begin{align*}
 	\det \left(\begin{bmatrix}
 	1 & 0 \\ 
@@ -333,6 +329,7 @@ Because $\ket{\lambda = 1}\bra{\lambda = 1} = \begin{bmatrix}
 
 
 \Textbf{2.13}
+
 Suppose $\ket{\psi},\ \ket{\phi}$ are arbitrary vectors in $V$.
 \begin{align*}
 	\left(\ket{\psi},\ (\ket{w}\bra{v}) \ket{\phi}\right)^* &=
@@ -439,6 +436,7 @@ Suppose $\ket{v}$ is a eigenvector with corresponding eigenvalue $\lambda$.
 
 
 \Textbf{2.21}
+
 Suppose $M$ be Hermitian. Then $M = M^\dagger$.
 \begin{align*}
 	M &= IMI\\
@@ -457,6 +455,7 @@ Therefore $QMQ$ is normal.
 By induction, $QMQ$ is diagonal ... (following is same as Box 2.2)
 
 \Textbf{2.22}
+
 Suppose $A$ is a Hermitian operator and $\ket{v_i}$ are eigenvectors of $A$ with eigenvalues $\lambda_i$.
 Then
 \begin{align*}
@@ -480,6 +479,7 @@ If $\lambda_i \neq \lambda_j$, then $\braket{v_i | v_j}  = 0$.
 
 
 \Textbf{2.23}
+
 Suppose $P$ is projector and $\ket{\lambda}$  are eigenvectors of $P$ with eigenvalues $\lambda$.
 Then $P^2 = P$.
 \begin{align*}
@@ -495,6 +495,7 @@ Therefore
 
 
 \Textbf{2.24}
+
 Def of positive $\braket{v | A | v} \geq 0$ for all $\ket{v}$.
 
 Suppose $A$ is a positive operator. $A$ can be decomposed as follows.
@@ -683,6 +684,7 @@ Thus $A \otimes B$ is Hermitian.
 
 
 \Textbf{2.31}
+
 Suppose $A$ and $B$ are positive operators. Then
 \begin{align*}
 	\bra{\psi} \otimes \bra{\phi} (A \otimes B) \ket{\psi} \otimes \ket{\phi} &= \braket{\psi |A| \psi} \braket{\phi | B | \phi}.
@@ -695,6 +697,7 @@ Thus $A \otimes B$ is positive if $A$ and $B$ are positive.
 
 
 \Textbf{2.32}
+
 Suppose $P_1$ and $P_2$  are projectors. Then
 \begin{align*}
 	(P_1 \otimes P_2) ^2 &= P_1^2 \otimes P_2^2\\
@@ -732,7 +735,10 @@ Thus $ P_1 \otimes P_2.$ is also projector.
 	\end{bmatrix}
 \end{align*}
 
+
+
 \Textbf{2.34}
+
 Suppose $A = \begin{bmatrix}
 4 & 3 \\ 
 3 & 4
@@ -871,6 +877,7 @@ Thus
 
 
 
+
 \Textbf{2.37}
 \begin{align*}
 	\Tr (AB) &= \sum_i \braket{i | AB | i}\\
@@ -880,6 +887,8 @@ Thus
 		&= \sum_j \braket{j | BA | j}\\
 		&= \Tr (BA)
 \end{align*}
+
+
 
 \Textbf{2.38}
 \begin{align*}
@@ -898,10 +907,10 @@ Thus
 
 
 
-\Textbf{2.39}
-(1)
 
-$(A, B) \equiv \Tr (A^\dagger B)$.
+\Textbf{2.39}
+
+(1) $(A, B) \equiv \Tr (A^\dagger B)$.
 
 \vspace{5mm}
 (i)
@@ -1173,7 +1182,9 @@ i & 0
 \end{align*}
 
 
+
 \Textbf{2.43}
+
 From eq (2.75) and eq (2.76), $\left\{\sigma_j,  \sigma_k \right\} = 2 \delta_{jk} I$.
 From eq (2.77),
 \begin{align*}
@@ -1184,6 +1195,7 @@ From eq (2.77),
 
 
 \Textbf{2.44}
+
 By assumption, $\left[A, B\right] = 0$ and $\left\{A, B\right\} = 0$, then $AB = 0$.
 Since $A$ is invertible, multiply by $A^{-1}$ from left, then
 \begin{align*}
@@ -1201,12 +1213,15 @@ Since $A$ is invertible, multiply by $A^{-1}$ from left, then
 \end{align*}
 
 
+
 \Textbf{2.46}
 \begin{align*}
 	\left[A, B\right] &= AB - BA\\
 		&= - (BA - AB)\\
 		&= -\left[B, A\right]
 \end{align*}
+
+
 
 \Textbf{2.47}
 \begin{align*}
@@ -1215,6 +1230,8 @@ Since $A$ is invertible, multiply by $A^{-1}$ from left, then
 		&= -i \left[B, A \right]\\
 		&= i \left[A, B\right]
 \end{align*}
+
+
 
 \Textbf{2.48}
 
@@ -1265,6 +1282,7 @@ Thus $H = U\sqrt{H^2}$.
 
 
 \Textbf{2.49}
+
 Normal matrix is diagonalizable, $A = \sum_i \lambda_i \kb{i}$.
 \begin{align*}
 	J &= \sqrt{A^\dagger A} = \sum_i | \lambda_i | \kb{i}.\\
@@ -1323,6 +1341,9 @@ $A^\dagger A = \begin{bmatrix}
 
 I'm tired.
 
+
+
+
 \Textbf{2.51}
 
 \begin{align*}
@@ -1351,6 +1372,8 @@ I'm tired.
 	=
 	I.
 \end{align*}
+
+
 
 
 \Textbf{2.52}
@@ -1391,7 +1414,9 @@ Eigenvalues are $\lambda_\pm = \pm 1$ and associated eigenvectors are $\ket{\lam
 
 
 
+
 \Textbf{2.54}
+
 Since $[A, B] = 0$, $A$ and $B$ are simultaneously diagonalize, $A = \sum_i a_i \kb{i}$, $B = \sum_i b_i \kb{i}$.
 \begin{align*}
 	\exp (A) \exp (B) &= \left(\sum_i \exp (a_i) \kb{i}\right) \left(\sum_i \exp (b_i) \kb{i}\right) \\
@@ -1471,29 +1496,29 @@ $U = \sum_i \lambda_i \kb{\lambda_i}$~~~ ($|\lambda_i| = 1$).
 
 \Textbf{2.60}
 \begin{align*}
-\vec{v} \cdot \vec{\sigma} &= \sum_{i=1}^3 v_i \sigma_i\\
-&= v_1 \begin{bmatrix}
-0 & 1 \\ 
-1 & 0
-\end{bmatrix}
-+ v_2 \begin{bmatrix}
-0 & -i \\ 
-i & 0
-\end{bmatrix}
-+ v_3 \begin{bmatrix}
-1 & 0 \\ 
-0 & -1
-\end{bmatrix} \\
-&= \begin{bmatrix}
-v_3 & v_1 - i v_2 \\ 
-v_1 + iv_2 & -v_3
-\end{bmatrix}
+    \vec{v} \cdot \vec{\sigma} &= \sum_{i=1}^3 v_i \sigma_i\\
+    &= v_1 \begin{bmatrix}
+        0 & 1 \\ 
+        1 & 0
+    \end{bmatrix}
+    + v_2 \begin{bmatrix}
+        0 & -i \\ 
+        i & 0
+    \end{bmatrix}
+    + v_3 \begin{bmatrix}
+        1 & 0 \\ 
+        0 & -1
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        v_3 & v_1 - i v_2 \\ 
+        v_1 + iv_2 & -v_3
+    \end{bmatrix}
 \end{align*}
 
 \begin{align*}
-\det (\vec{v} \cdot \vec{\sigma}  - \lambda I) &= (v_3 - \lambda) (-v_3 - \lambda) - (v_1 - iv_2) (v_1 + iv_2)\\
-&= \lambda^2 - (v_1^2 + v_2^2  + v_3^2)\\
-&= \lambda^2 - 1 ~~~ (\because |\vec{v}| = 1)
+    \det (\vec{v} \cdot \vec{\sigma}  - \lambda I) &= (v_3 - \lambda) (-v_3 - \lambda) - (v_1 - iv_2) (v_1 + iv_2)\\
+    &= \lambda^2 - (v_1^2 + v_2^2  + v_3^2)\\
+    &= \lambda^2 - 1 ~~~ (\because |\vec{v}| = 1)
 \end{align*}
 Eigenvalues are $\lambda = \pm 1$.
 
@@ -1502,8 +1527,8 @@ Eigenvalues are $\lambda = \pm 1$.
 \begin{align*}
 	\vec{v} \cdot \vec{\sigma}  - \lambda I &= \vec{v} \cdot \vec{\sigma}  - I\\	
 		&= \begin{bmatrix}
-		v_3 - 1 & v_1 - i v_2 \\ 
-		v_1 + i v_2 & - v_3 - 1
+    		v_3 - 1 & v_1 - i v_2 \\ 
+    		v_1 + i v_2 & - v_3 - 1
 		\end{bmatrix}
 \end{align*}
 
@@ -1516,26 +1541,26 @@ Eigenvector is $\ket{\lambda_1} = \sqrt{ \frac{1+v_3}{2 }} \begin{bmatrix}
 	\kb{\lambda_1} &= \frac{1+v_3}{2 } \begin{bmatrix}
 		1 \\ 
 		\frac{1-v_3}{v_1 - iv_2}
-		\end{bmatrix}
-		\begin{bmatrix}
-		1 &
-		\frac{1-v_3}{v_1 + iv_2}
-		\end{bmatrix}\\
+	\end{bmatrix}
+	\begin{bmatrix}
+   		1 &
+   		\frac{1-v_3}{v_1 + iv_2}
+	\end{bmatrix}\\
 %
 	&=
 	 \frac{1+v_3}{2 } \begin{bmatrix}
-	 1 & \frac{v_1 - iv_2}{1 + v_3} \\ 
-	 \frac{v_1 + iv_2}{1 + v_3} & \frac{1-v_3}{1+v_3}
+    	 1 & \frac{v_1 - iv_2}{1 + v_3} \\ 
+    	 \frac{v_1 + iv_2}{1 + v_3} & \frac{1-v_3}{1+v_3}
 	 \end{bmatrix} \\
 	 &=
 	 \frac{1}{2} \begin{bmatrix}
-	 1+v_3 & v_1 - iv_2 \\ 
-	 v_1 + iv_2 & 1 - v_3
+    	 1+v_3 & v_1 - iv_2 \\ 
+    	 v_1 + iv_2 & 1 - v_3
 	 \end{bmatrix} \\
 	 &=
 	  \frac{1}{2} \left( I + \begin{bmatrix}
-	 v_3 & v_1 - iv_2 \\ 
-	 v_1 + iv_2 & - v_3
+    	 v_3 & v_1 - iv_2 \\ 
+    	 v_1 + iv_2 & - v_3
 	 \end{bmatrix} \right) \\
 	 &=
 	 \frac{1}{2} (I + \vec{v} \cdot \vec{\sigma} )
@@ -1553,8 +1578,8 @@ Eigenvector is $\ket{\lambda_1} = \sqrt{ \frac{1+v_3}{2 }} \begin{bmatrix}
 \end{align*}
 
 Eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{bmatrix}
-1 \\ 
-- \frac{1+v_3}{v_1 - iv_2}
+    1 \\ 
+    - \frac{1+v_3}{v_1 - iv_2}
 \end{bmatrix} $.
 
 
@@ -1641,7 +1666,7 @@ Thus the measurement is a projective measurement.
         &= \sqrt{E_m} I \sqrt{E_m}\\
         &= E_m.
 \end{align*}
- 
+
 Since $E_m$ is POVM,  for arbitrary  unitary $U$, $M_m^\dagger M_m$ is POVM.
 
 
@@ -1666,8 +1691,8 @@ And $\braket{\psi_i | E_i | \psi_i} = \braket{\psi_i | \psi_i} \braket{\psi_i | 
 
 
 \begin{align*}
-     \braket{X_1 Z_2} = \left(\frac{\bra{00} + \bra{11}}{\sqrt{2}} \right) X_1 Z_2 \left(\frac{\ket{00} + \ket{11}}{\sqrt{2}} \right) 
-    = \frac{\bra{00} + \bra{11}}{\sqrt{2}}  \cdot \frac{\ket{10} - \ket{01}}{\sqrt{2}} 
+     \braket{X_1 Z_2} = \left(\frac{\bra{00} + \bra{11}}{\sqrt{2}} \right) X_1 Z_2 \left(\frac{\ket{00} + \ket{11}}{\sqrt{2}} \right)
+    = \frac{\bra{00} + \bra{11}}{\sqrt{2}}  \cdot \frac{\ket{10} - \ket{01}}{\sqrt{2}}
     = 0
 \end{align*}
 
@@ -1700,7 +1725,7 @@ Suppose $\ket{a} = a_0 \ket{0}  + a_1\ket{1}$ and $\ket{b} = b_0 \ket{0}  + b_1\
     \ket{a} \ket{b} = a_0 b_0 \ket{00} + a_0 b_1 \ket{01} + a_1 b_0 \ket{10} + a_1 b_1 \ket{11}.
 \end{align*}
 
-If $\ket{\psi} = \ket{a} \ket{b}$, then $a_0 b_0 = 1,~ a_0 b_1=0,~ a_1 b_0 = 0,~ a_1 b_1 = 1$ since $\{\ket{ij}\}$ is an orthonormal basis. 
+If $\ket{\psi} = \ket{a} \ket{b}$, then $a_0 b_0 = 1,~ a_0 b_1=0,~ a_1 b_0 = 0,~ a_1 b_1 = 1$ since $\{\ket{ij}\}$ is an orthonormal basis.
 
 If $a_0 b_1 = 0$, then $a_0 = 0$ or $b_1 = 0$.
 
@@ -1743,10 +1768,10 @@ First, we prove $\{\ket{\psi_i} \}$ is a linearly independent basis.
 \begin{align*}
     &a_1 \ket{\psi_1} + a_2 \ket{\psi_2} + a_3 \ket{\psi_3} + a_4 \ket{\psi_4} = 0\\
     &\therefore \frac{1}{\sqrt{2}} \begin{bmatrix}
-    a_1 + a_2 \\ 
-    a_3 + a_4 \\ 
-    a_3 - a_4 \\ 
-    a_1 - a_2
+        a_1 + a_2 \\ 
+        a_3 + a_4 \\ 
+        a_3 - a_4 \\ 
+        a_1 - a_2
     \end{bmatrix} = 0
 \end{align*}
 \begin{subnumcases}
@@ -1765,7 +1790,10 @@ Moreover $\norm{\ket{\psi_i}} = 1$ and $\braket{\psi_i | \psi_j} = \delta_{ij}$ 
 Therefore $\{\ket{\psi_i}\}$ forms an orthonormal basis.
 
 
+
+
 \Textbf{2.70}
+
 For any Bell states we get $\braket{\psi_i | E \otimes I | \psi_i} = \frac{1}{2} (\braket{0|E|0} + \braket{1|E|1})$.
 
 Suppose Eve measures the qubit Alice sent by measurement operators $M_m$.
@@ -1774,7 +1802,10 @@ Since $M ^\dagger_m M_m$ is positive, $p_i(m)$ are same values for all $\ket{\ps
 Thus Eve can't distinguish Bell states.
 
 
+
+
 \Textbf{2.71}
+
 From spectral decomposition,
 \begin{align*}
     \rho &= \sum_i p_i \kb{\psi_i}, ~~ p_i \geq 0, ~~ \sum_i p_i = 1.\\
@@ -1804,11 +1835,10 @@ Conversely if $\rho$ is pure, then $\rho = \kb{\psi}$.
 
 
 \Textbf{2.72}
-(1)
 
-Since density matrix is Hermitian, matrix representation is 
+(1) Since density matrix is Hermitian, matrix representation is
 $\rho = \begin{bmatrix}
-a & b \\ b^* & d
+    a & b \\ b^* & d
 \end{bmatrix}$,
 $a, d \in \mathds{R}$ and $b \in \mathds{C}$ w.r.t. standard basis.
 Because $\rho$ is density matrix, $\Tr (\rho) = a+d = 1$.
@@ -1820,11 +1850,11 @@ In this case,
     \rho = \begin{bmatrix}
         a & b \\ b^* & d
     \end{bmatrix}
-    = 
+    =
     \frac{1}{2} \begin{bmatrix}
         1+r_3 & r_1 - ir_2 \\ 
         r_1 + ir_2 & 1 - r_3
-    \end{bmatrix} 
+    \end{bmatrix}
     =
     \frac{1}{2} (I + \vec{r} \cdot \vec{\sigma}).
 \end{align*}
@@ -1873,13 +1903,256 @@ Conversely, if $|\vec{r}| = 1$, then $\Tr (\rho^2) = \frac{1}{4} (2 + 2|\vec{r}|
 
 
 \Textbf{2.73}
+\begin{screen}
+    \Textbf{Theorem 2.6}
+%
+    \begin{align*}
+        \rho = \sum_i p_i \kb{\psi_i} = \sum_i \kb{\tilde{\psi_i}} = \sum_j \kb{\tilde{\varphi}_j} = \sum_j q_j \kb{\varphi_j} ~~ \Leftrightarrow ~~ \ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}
+    \end{align*}
+    where $u$ is unitary.
+
+	Transformation in theorem 2.6, $\ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}$, corresponds to
+	\begin{align*}
+	    \left[ \ket{\tilde{\psi}_1} \cdots \ket{\tilde{\psi}_k} \right] = \Big[ \ket{\tilde{\varphi}_1} \cdots \ket{\tilde{\varphi}_k} \Big] U^T
+	\end{align*}
+	where $k = \mathrm{rank} (\mathcal{\rho})$.
+\end{screen}
+
+From spectral theorem, density matrix $\rho$ is decomposed as $\rho = \sum_{k=1}^{d} \lambda_k \kb{k}$ where $d = \dim \mathcal{H}$.
+Without loss of generality, we can assume $p_k > 0$ for $k = 1 \cdots , l$ where $l = \mathrm{rank} (\rho)$ and $p_k = 0$ for $k = l+1, \cdots, d$.
+Thus $\rho = \sum_{k=1}^{l} p_k \kb{k} = \sum_{k=1}^{l} \kb{\tilde{k}}$, where $\ket{\tilde{k}} = \sqrt{\lambda_k} \ket{k}$.
+
+Suppose $\ket{\psi_i}$ is a state in support $\rho$. Then
+\begin{align*}
+	\ket{\psi_i} = \sum_{k=1}^l c_{ik} \ket{k}, ~~ \sum_k |c_{ik}|^2 = 1.
+\end{align*}
+
+Define $\displaystyle p_i = \frac{1}{\sum_k \frac{|c_{ik}|^2}{\lambda_k} }$ and $\displaystyle u_{ik} = \frac{\sqrt{p_i} c_{ik}}{\sqrt{\lambda_k}}$.
+
+Now
+\begin{align*}
+	\sum_k |u_{ik}|^2 = \sum_k \frac{p_i | c_{ik} |^2 }{\lambda_k} = p_i \sum_k \frac{| c_{ik} |^2 }{\lambda_k} = 1.
+\end{align*}
+
+Next prepare an unitary operator such that $(i, k)$ component of $U$ is $u_{ik}$.
+Then we can define another ensemble such that
+\begin{align*}
+	\Big[  \ket{\tilde{\psi}_1} \cdots  \ket{\tilde{\psi}_i} \cdots \ket{\tilde{\psi}_l}\Big] = \Big[ \ket{\tilde{k}_1} \cdots \ket{\tilde{k}_l} \Big] U^T
+\end{align*}
+where $\ket{\tilde{\psi_i}} = \sqrt{p_i} \ket{\psi_i}$.
+From theorem 2.6,
+\begin{align*}
+	\rho = \sum_k \kb{\tilde{k}} = \sum_k \kb{\tilde{\psi}_k}.
+\end{align*}
+
+Therefore we can obtain a minimal ensemble for $\rho$ that contains $\ket{\psi_i}$.
+
+Moreover since $\rho^{-1} = \sum_k \frac{1}{\lambda_k} \kb{k}$,
+\begin{align*}
+	\braket{\psi_i | \rho^{-1} | \psi_i} = \sum_k \frac{1}{\lambda_k} \braket{\psi_i | k} \hspace{-1mm} \braket{k | \psi_i} = \sum_k \frac{|c_{ik}|^2}{\lambda_k} = \frac{1}{p_i}.
+\end{align*}
+
+Hence, $ \frac{1}{\braket{\psi_i | \rho^{-1} | \psi_i}} = p_i $.
+
+
 \Textbf{2.74}
+\begin{align*}
+	\rho_{AB} &= \kb{a}_A \otimes \kb{b}_B\\
+	\rho_A &= \Tr_{B} \rho_{AB} = \kb{a} \Tr (\kb{b}) = \kb{a}\\
+	\Tr (\rho_A^2) &= 1
+\end{align*}
+Thus $\rho_A$ is pure.
+
+
 \Textbf{2.75}
+Define $\ket{\Phi_\pm} = \frac{1}{\sqrt{2}} (\ket{00} \pm \ket{11})$ and $\ket{\Psi_\pm} = \frac{1}{\sqrt{2}} (\ket{01} \pm \ket{10})$.
+\begin{align*}
+	\kb{\Phi_\pm}_{AB} &= \frac{1}{2} (\kb{00} \pm \kbt{00}{11} \pm \kbt{11}{00} + \kb{11})\\
+	\Tr_B (\kb{\Phi_\pm}_{AB}) &= \frac{1}{2} (\kb{0} + \kb{1}) = \frac{I}{2}\\
+%
+	\kb{\Psi_\pm} &= \frac{1}{2} (\kb{01} \pm \kbt{01}{10} \pm \kbt{10}{01} + \kb{10})\\
+	\Tr_B (\kb{\Psi_\pm}) &= \frac{1}{2} (\kb{0} + \kb{1}) = \frac{I}{2}
+\end{align*}
+
+
 \Textbf{2.76}
+
+Unsolved. I think the polar decomposition can only apply to square matrix $A$, not arbitrary linear operators.
+Suppose $A$ is $m \times n$ matrix. Then size of $A^\dagger A$ is $n \times n$. Thus the size of $U$ should be $m \times n$.
+Maybe $U$ is isometry, but I think it is not unitary.
+
+
+
 \Textbf{2.77}
+\begin{align*}
+	\ket{\psi}  &=  \ket{0}  \ket{\Phi_+}\\
+		&= \ket{0} \left[\frac{1}{\sqrt{2}}(\ket{00} + \ket{11})\right]\\
+		&= (\alpha \ket{\phi_0} + \beta \ket{\phi_1})  \left[\frac{1}{\sqrt{2}}(\ket{\phi_0 \phi_0} + \ket{\phi_1 \phi_1})\right]\\
+\end{align*}
+where $\ket{\phi_i}$ are arbitrary orthonormal states and $\alpha, \beta \in \mathds{C}$.
+We cannot vanish cross term. Therefore $\ket{\psi}$ cannot be written as $\ket{\psi} = \sum_i \lambda_i \ket{i}_A \ket{i}_B \ket{i}_C$.
+
+
 \Textbf{2.78}
+\begin{proof}
+	Former part.
+
+	If $\ket{\psi}$ is product, then there exist a state $\ket{\phi_A}$ for system $A$, and a state $\ket{\phi_B}$ for system $B$ such that
+	$\ket{\psi} = \ket{\phi_A} \ket{\phi_B}$.
+
+	Obviously, this Schmidt number is  1.
+
+	Conversely, if Schmidt number is 1, the state is written as $\ket{\psi} = \ket{\phi_A} \ket{\phi_B}$.
+	Hence this is a product state.
+\end{proof}
+
+
+\begin{proof}
+	Later part.
+
+	($\Rightarrow$) Proved by exercise 2.74.
+
+	($\Leftarrow$) Let a pure state be  $\ket{\psi} = \sum_i \lambda_i \ket{i_A} \ket{i_B}$. Then $\rho_A = \Tr_B (\kb{\psi}) = \sum_i \lambda_i^2 \kb{i}$.
+	If $\rho_A$ is a pure state, then $\lambda_j = 1$ and otherwise 0 for some $j$.
+	It follows that  $\ket{\psi_j} = \ket{j_A} \ket{j_B}$. Thus $\ket{\psi}$ is a product state.
+\end{proof}
+
+
 \Textbf{2.79}
+\begin{screen}
+	Procedure of Schmidt decomposition.
+
+	Goal: $\ket{\psi} = \sum_{i} \sqrt{\lambda_i} \ket{i_A} \ket{i_B}$
+
+	\begin{itemize}
+		\item Diagonalize reduced density matrix $\rho_A = \sum_i \lambda_i \kb{i_A}$.
+		\item Derive $\ket{i_B}$, $\displaystyle  \ket{i_B} = \frac{(I \otimes \bra{i_A}) \ket{\psi}}{\sqrt{\lambda_i}}$
+		\item Construct $\ket{\psi}$.
+	\end{itemize}
+
+\end{screen}
+
+
+(i)
+\begin{align*}
+	\frac{1}{\sqrt{2}} (\ket{00} + \ket{11}) \text{ This is already decomposed.}
+\end{align*}
+
+
+(ii)
+\begin{align*}
+	\frac{\ket{00}+ \ket{01} + \ket{10} + \ket{11}}{2} = \left( \frac{\ket{0} + \ket{1}}{\sqrt{2}}  \right) \otimes \left( \frac{\ket{0} + \ket{1}}{\sqrt{2}}  \right) = \ket{\psi} \ket{\psi} \text{ where } \ket{\psi} = \frac{\ket{0} + \ket{1}}{\sqrt{2}}
+\end{align*}
+
+
+
+(iii)
+\begin{align*}
+	\ket{\psi}_{AB} &= \frac{1}{\sqrt{3}} (\ket{00} + \ket{01} + \ket{10})\\
+	\rho_{AB} &= \kb{\psi}_{AB}
+\end{align*}
+%
+%
+%
+\begin{align*}
+	\rho_A &= \Tr_B (\rho_{AB}) = \frac{1}{3} \left( 2\kb{0} + \kbt{0}{1} + \kbt{1}{0} + \kb{1} \right)\\
+	\det (\rho_A - \lambda I) &= \left( \frac{2}{3} - \lambda \right) \left( \frac{1}{3} - \lambda \right) - \frac{1}{9} = 0\\
+	\lambda^2 &- \lambda + \frac{1}{9} = 0\\
+	\lambda &= \frac{1 \pm \sqrt{5} / 3}{2} = \frac{3 \pm \sqrt{5}}{6}
+\end{align*}
+
+
+
+Eigenvector with eigenvalue $\displaystyle \lambda_0 \equiv \frac{3 + \sqrt{5}}{6}$ is $\displaystyle \ket{\lambda_0} \equiv \frac{1}{\sqrt{\frac{5 + \sqrt{5}}{2}}} \begin{bmatrix}
+    \frac{1 + \sqrt{5}}{2} \\ 
+    1
+\end{bmatrix}$ .
+
+Eigenvector with eigenvalue $\displaystyle \lambda_1 \equiv \frac{3 - \sqrt{5}}{6}$ is $\displaystyle \ket{\lambda_1} \equiv \frac{1}{\sqrt{\frac{5 - \sqrt{5}}{2}}} \begin{bmatrix}
+    \frac{1 - \sqrt{5}}{2} \\ 
+    1
+\end{bmatrix} $.
+
+\begin{align*}
+	\rho_A = \lambda_0 \kb{\lambda_0} + \lambda_1 \kb{\lambda_1}.
+\end{align*}
+
+
+\begin{align*}
+	\ket{a_0} \equiv \frac{(I \otimes \bra{\lambda_0}) \ket{\psi} }{\sqrt{\lambda_0}}\\
+	\ket{a_1} \equiv \frac{(I \otimes \bra{\lambda_1}) \ket{\psi} }{\sqrt{\lambda_1}}
+\end{align*}
+
+Then
+\begin{align*}
+	\ket{\psi} = \sum_{i=0}^1 \sqrt{\lambda_i} \ket{a_i} \ket{\lambda_i}.
+\end{align*}
+
+
+(It's too tiresome to calculate $\ket{a_i}$)
+
+
+
 \Textbf{2.80}
+
+Let $\ket{\psi} = \sum_i \lambda_i \ket{\psi_i}_A \ket{\psi_i}_B$ and $\ket{\varphi} = \sum_i \lambda_i \ket{\varphi_i}_A \ket{\varphi_i}_B$.
+
+Define $U = \sum_i \kbt{\psi_j}{\varphi_j}_A$ and $V = \sum_j \kbt{\psi_j}{\varphi_j}$.
+
+Then
+\begin{align*}
+	(U \otimes V) \ket{\varphi} &= \sum_i \lambda_i U \ket{\varphi_i}_A  V \ket{\varphi_i}_B\\
+		&= \sum_i \lambda_i \ket{\psi_i}_A \ket{\psi_i}_B\\
+		&= \ket{\psi}.
+\end{align*}
+
+
 \Textbf{2.81}
+
+Suppose $\rho_A = \Tr_R \kb{AR_2} = \sum_i \lambda_i \kb{i}$. Define $\ket{AR_1} = (I_A \otimes U_R) \ket{AR_2}$.
+\begin{align*}
+	\Tr_R (\kb{AR_1}) &= \Tr_R \left( (I_A \otimes U_R) \kb{AR_2} (I_A \otimes U_R^\dagger)  \right)\\
+		&= \Tr_R \left( \kb{AR_2} (I_A \otimes U_R^\dagger) (I_A \otimes U_R) \right)\\
+		&= \Tr_R ( \kb{AR_2} )\\
+		&= \rho_A.
+\end{align*}
+Thus $\ket{AR_1}$ is also a purification of $\rho_A$.
+
+
+
 \Textbf{2.82}
 
+(1)
+
+Let $\ket{\psi} = \sum_i \sqrt{p_i} \ket{\psi_i} \ket{i}$.
+\begin{align*}
+	\Tr_R (\kb{\psi}) = \sum_i p_i \kb{\psi_i}
+\end{align*}
+Thus $\ket{\psi}$ is a purification of $\rho$.
+
+\vspace{5mm}
+(2)
+Probability
+\begin{align*}
+	\Tr \left[ (I \otimes \kb{i}) \kb{\psi}\right] = \braket{\psi | (I \otimes \kb{i}) | \psi} = p_i \braket{\psi_i | \psi_i} = p_i.
+\end{align*}
+
+Post-measurement state
+\begin{align*}
+	\frac{(I \otimes \kb{i} \ket{\psi})}{\sqrt{p_i}} = \frac{\sqrt{p_i} \ket{\psi_i}}{\sqrt{p_i}} = \ket{\psi_i}.
+\end{align*}
+
+
+\vspace{5mm}
+(3)
+
+Suppose $\ket{AR}$ is a purification of $\rho$ such that $\ket{AR} = \sum_i \sqrt{p_i} \ket{\psi_i} \ket{r_i}$.
+By exercise 2.81, the others purification is written as $(I \otimes U) \ket{AR}$.
+\begin{align*}
+	(I \otimes U)  \ket{AR} &= (I \otimes U) \sum_i \sqrt{p_i} \ket{\psi_i} \ket{r_i}\\
+		&= \sum_i \sqrt{p_i} \ket{\psi_i} U\ket{r_i}\\
+		&= \sum_i \sqrt{p_i} \ket{\psi_i} \ket{i}
+\end{align*}
+where $U = \sum_i \kbt{i}{r_i}$.
+
+By (2), if we measure the system $R$ w.r.t $\ket{i}$, post-measurement state for system $A$ is $\ket{\psi_i}$ with probability $p_i$, which prove the assertion.
