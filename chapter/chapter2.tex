@@ -1934,7 +1934,15 @@ Now
 	\sum_k |u_{ik}|^2 = \sum_k \frac{p_i | c_{ik} |^2 }{\lambda_k} = p_i \sum_k \frac{| c_{ik} |^2 }{\lambda_k} = 1.
 \end{align*}
 
-Next prepare an unitary operator such that $(i, k)$ component of $U$ is $u_{ik}$.
+Next prepare an unitary operator
+\footnote{By Gram-Schmidt procedure construct an orthonormal basis $\{\boldsymbol{u}_j\}$ (row vector) with $\boldsymbol{u}_i = [u_{i1} \cdots u_{ik} \cdots u_{il}]$. Then define unitary $U = \begin{bmatrix}
+    \boldsymbol{u}_1 \\ 
+    \vdots \\ 
+    \boldsymbol{u}_i \\ 
+    \vdots \\ 
+    \boldsymbol{u}_l
+    \end{bmatrix}$.} 
+such that $i$th row of $U$ is $[u_{i1} \cdots u_{ik} \cdots u_{il}]$.
 Then we can define another ensemble such that
 \begin{align*}
 	\Big[  \ket{\tilde{\psi}_1} \cdots  \ket{\tilde{\psi}_i} \cdots \ket{\tilde{\psi}_l}\Big] = \Big[ \ket{\tilde{k}_1} \cdots \ket{\tilde{k}_l} \Big] U^T
