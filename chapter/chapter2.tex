@@ -248,7 +248,7 @@ Thus
 	\det \left(\begin{bmatrix}
 	-\lambda & 1 \\
 	1 & -\lambda
-	\end{bmatrix} \right) = 0 \Rightarrow \lambda \pm 1
+	\end{bmatrix} \right) = 0 \Rightarrow \lambda = \pm 1
 \end{align*}
 
 If $\lambda = -1$,
@@ -382,7 +382,7 @@ Thus
 	P &= \sum_i \ket{i}\bra{i}.\\
 	P^2 &= \left(\sum_i \ket{i}\bra{i}\right) \left(\sum_j \ket{j}\bra{j}\right)\\
 	&= \sum_{i,j} \ket{i}\braket{i | j}\bra{j}\\
-	&= \sum_i \ket{i}\bra{j} \delta_{ij}\\
+	&= \sum_{i,j} \ket{i}\bra{j} \delta_{ij}\\
 	&= \sum_i \ket{i}\bra{i}\\
 	&= P
 \end{align*}
@@ -512,10 +512,42 @@ Now operators $B$ and $C$ are Hermitian.
 \end{align*}
 
 Since $B$ and $C$ are Hermitian, $\alpha,~ \beta \in \mathds{R}$.
-From def of positive operator, $\beta$ should be vanished.
-Hence $\beta = \braket{v | C | v}$ for all $\ket{v}$, i.e. $C = 0$.
+From def of positive operator, $\beta$ should be vanished because $\braket{v | A | v} = 0$ is real.
+Hence $\beta = \braket{v | C | v} =  0$ for all $\ket{v}$, i.e. $C = 0$.
 
-Therefore $A = B$. Since $B$ is Hermitian, positive operator $A$ is also Hermitian.
+Therefore $A = A^\dagger$.
+
+\begin{screen}
+	Reference: MIT 8.05 Lecture note  by Prof. Barton Zwiebach.\\
+	\url{https://ocw.mit.edu/courses/physics/8-05-quantum-physics-ii-fall-2013/lecture-notes/MIT8_05F13_Chap_03.pdf}
+	
+	\begin{prop} \label{prop: zeroop}
+		Let $T$ be a linear operator in a complex vector space $V$.
+		
+		If $(u, Tv) = 0$ for all $u, v \in V$, then $T = 0$.
+	\end{prop}
+
+	\begin{proof}
+		Suppose $u = Tv$. Then $(Tv, Tv) = 0$ for all $v$ implies that $Tv = 0$ for all $v$. Therefore $T = 0$.
+	\end{proof}
+
+	\begin{thm}
+		If $(v, Av) = 0$ for all $v \in V$, then $A = 0$.
+	\end{thm}
+	
+	\begin{proof}
+		First, we show that $(u, Tv) = 0$ if $(v, Av) = 0$. Then apply proposition \ref{prop: zeroop}\\
+		Suppose $u, v \in V$. Then $(u, Tv)$ is decomposed as
+		\begin{align*}
+			(u, Tv) = \frac{1}{4} \left[ (u+v, T(u+v)) - (u-v, T(u-v)) + \frac{1}{i} (u+iv, T(u+iv)) \right.\\
+			\left. \hspace{4cm} - \frac{1}{i} (u-iv, T(u-iv))  \right].
+		\end{align*}
+		If $(v, Tv) = 0$ for all $v \in V$, the right hand side of above eqn vanishes. Thus $(u, Tv) = 0$ for all $u, v \in V$.
+		Then $T = 0$.
+	\end{proof}
+
+	
+\end{screen}
 
 
 \Textbf{2.25}
@@ -2164,3 +2196,27 @@ By exercise 2.81, the others purification is written as $(I \otimes U) \ket{AR}$
 where $U = \sum_i \kbt{i}{r_i}$.
 
 By (2), if we measure the system $R$ w.r.t $\ket{i}$, post-measurement state for system $A$ is $\ket{\psi_i}$ with probability $p_i$, which prove the assertion.
+
+
+
+\Textbf{Problem 2.1}
+
+From Exercise 2.35, $\vec{n} \cdot \vec{\sigma}$ is decomposed as
+\begin{align*}
+	\vec{n} \cdot \vec{\sigma} &= \kb{\lambda_1} - \kb{\lambda_{-1}}
+\end{align*}
+where $\ket{\lambda_{\pm 1}}$ are eigenvector of $\vec{n} \cdot \vec{\sigma}$ with eigenvalues $\pm 1$.
+
+Thus 
+\begin{align*}
+	f(\theta \vec{n} \cdot \vec{\sigma}) &= f(\theta) \kb{\lambda_1} + f(- \theta) \kb{\lambda_{-1}}\\
+		&= \left( \frac{f(\theta) + f(-\theta)}{2} + \frac{f(\theta) - f(-\theta)}{2}  \right) \kb{\lambda_1} + \left( \frac{f(\theta) + f(-\theta)}{2} - \frac{f(\theta) - f(-\theta)}{2}  \right)\kb{\lambda_{-1}}\\
+		&= \frac{f(\theta) + f(-\theta)}{2} \left( \kb{\lambda_1} + \kb{\lambda_{-1}} \right) +  \frac{f(\theta) - f(-\theta)}{2} \left(\kb{\lambda_1} - \kb{\lambda_{-1}} \right)\\
+		&= \frac{f(\theta) + f(-\theta)}{2} I + \frac{f(\theta) - f(-\theta)}{2} \vec{n} \cdot \vec{\sigma}
+\end{align*}
+
+\Textbf{Problem 2.2}
+Unsolved
+
+\Textbf{Problem 2.3}
+Unsolved

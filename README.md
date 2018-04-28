@@ -1,6 +1,6 @@
 # Solution for Quantum Computation and Quantum Information
 
-This is unofficial solution manual for "Quantum Computation and Quantum Information: 10th Anniversary Edition" (ISBN-13: 978-1107002173) by Nielsen and Chuang
+This is unofficial solution manual for "[Quantum Computation and Quantum Information: 10th Anniversary Edition](http://www.cambridge.org/jp/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&isbn=9781107002173#BBFv83H3ofgcgG3A.97)" (ISBN-13: 978-1107002173) by Nielsen and Chuang
 
 There is no guarantee that these solutions are correct.
 
@@ -94,3 +94,41 @@ There is no guarantee that these solutions are correct.
 - [x] 2.80
 - [x] 2.81
 - [x] 2.82
+
+### Chapter 8
+
+- [ ] 8.1
+- [ ] 8.2
+- [ ] 8.3
+- [ ] 8.4
+- [ ] 8.5
+- [ ] 8.6
+- [ ] 8.7
+- [ ] 8.8
+- [ ] 8.9
+- [ ] 8.10
+- [ ] 8.11
+- [ ] 8.12
+- [ ] 8.13
+- [ ] 8.14
+- [ ] 8.15
+- [ ] 8.16
+- [ ] 8.17
+- [ ] 8.18
+- [ ] 8.19
+- [ ] 8.20
+- [ ] 8.21
+- [ ] 8.22
+- [ ] 8.23
+- [ ] 8.24
+- [ ] 8.25
+- [ ] 8.26
+- [ ] 8.27
+- [ ] 8.28
+- [ ] 8.29
+- [ ] 8.30
+- [ ] 8.31
+- [ ] 8.32
+- [ ] 8.33
+- [ ] 8.34
+- [ ] 8.35
