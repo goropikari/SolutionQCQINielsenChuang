@@ -512,7 +512,7 @@ Now operators $B$ and $C$ are Hermitian.
 \end{align*}
 
 Since $B$ and $C$ are Hermitian, $\alpha,~ \beta \in \mathds{R}$.
-From def of positive operator, $\beta$ should be vanished because $\braket{v | A | v} = 0$ is real.
+From def of positive operator, $\beta$ should be vanished because $\braket{v | A | v}$ is real.
 Hence $\beta = \braket{v | C | v} =  0$ for all $\ket{v}$, i.e. $C = 0$.
 
 Therefore $A = A^\dagger$.
@@ -520,10 +520,10 @@ Therefore $A = A^\dagger$.
 \begin{screen}
 	Reference: MIT 8.05 Lecture note  by Prof. Barton Zwiebach.\\
 	\url{https://ocw.mit.edu/courses/physics/8-05-quantum-physics-ii-fall-2013/lecture-notes/MIT8_05F13_Chap_03.pdf}
-	
+
 	\begin{prop} \label{prop: zeroop}
 		Let $T$ be a linear operator in a complex vector space $V$.
-		
+
 		If $(u, Tv) = 0$ for all $u, v \in V$, then $T = 0$.
 	\end{prop}
 
@@ -534,7 +534,7 @@ Therefore $A = A^\dagger$.
 	\begin{thm}
 		If $(v, Av) = 0$ for all $v \in V$, then $A = 0$.
 	\end{thm}
-	
+
 	\begin{proof}
 		First, we show that $(u, Tv) = 0$ if $(v, Av) = 0$. Then apply proposition \ref{prop: zeroop}\\
 		Suppose $u, v \in V$. Then $(u, Tv)$ is decomposed as
@@ -546,7 +546,7 @@ Therefore $A = A^\dagger$.
 		Then $T = 0$.
 	\end{proof}
 
-	
+
 \end{screen}
 
 
@@ -679,9 +679,9 @@ In general, tensor product is not commutable.
 	\end{bmatrix} \\
 	&=
 	\begin{bmatrix}
-		A_{11} B^T & \cdots & A_{1m}^T B^T \\
+		A_{11} B^T & \cdots & A_{1m} B^T \\
 		\vdots & \ddots  & \vdots \\
-		A_{n1}^T B^T & \cdots & A_{nm}^T B^T
+		A_{n1} B^T & \cdots & A_{nm} B^T
 	\end{bmatrix} \\
 	&= A^T \otimes B^T.
 \end{align*}
@@ -1973,7 +1973,7 @@ Next prepare an unitary operator
     \boldsymbol{u}_i \\ 
     \vdots \\ 
     \boldsymbol{u}_l
-    \end{bmatrix}$.} 
+    \end{bmatrix}$.}
 such that $i$th row of $U$ is $[u_{i1} \cdots u_{ik} \cdots u_{il}]$.
 Then we can define another ensemble such that
 \begin{align*}
@@ -2017,11 +2017,17 @@ Define $\ket{\Phi_\pm} = \frac{1}{\sqrt{2}} (\ket{00} \pm \ket{11})$ and $\ket{\
 
 \Textbf{2.76}
 
-Unsolved. I think the polar decomposition can only apply to square matrix $A$, not arbitrary linear operators.
+Unsolved. \sout{I think the polar decomposition can only apply to square matrix $A$, not arbitrary linear operators.
 Suppose $A$ is $m \times n$ matrix. Then size of $A^\dagger A$ is $n \times n$. Thus the size of $U$ should be $m \times n$.
-Maybe $U$ is isometry, but I think it is not unitary.
+Maybe $U$ is isometry, but I think it is not unitary.}
 
+I misunderstand linear operator.
+\begin{quote}
+	Quoted from "Advanced Liner Algebra" by Steven Roman, ISBN 0387247661.
 
+	A linear transformation $\tau : V \rightarrow V$ is called a \textbf{linear operator} on $V$.\footnote{According to Roman, some authors use the term linear operator for any linear transformation from $V$ to $W$.}
+\end{quote}
+Thus coordinate matrices of linear operator are square matrices. And Nielsen and Chaung say at Theorem 2.3, "Let $A$ be a linear operator on a vector space $V$." Therefore $A$ is a linear transformation such that $A : V \rightarrow V$.
 
 \Textbf{2.77}
 \begin{align*}
@@ -2207,7 +2213,7 @@ From Exercise 2.35, $\vec{n} \cdot \vec{\sigma}$ is decomposed as
 \end{align*}
 where $\ket{\lambda_{\pm 1}}$ are eigenvector of $\vec{n} \cdot \vec{\sigma}$ with eigenvalues $\pm 1$.
 
-Thus 
+Thus
 \begin{align*}
 	f(\theta \vec{n} \cdot \vec{\sigma}) &= f(\theta) \kb{\lambda_1} + f(- \theta) \kb{\lambda_{-1}}\\
 		&= \left( \frac{f(\theta) + f(-\theta)}{2} + \frac{f(\theta) - f(-\theta)}{2}  \right) \kb{\lambda_1} + \left( \frac{f(\theta) + f(-\theta)}{2} - \frac{f(\theta) - f(-\theta)}{2}  \right)\kb{\lambda_{-1}}\\
