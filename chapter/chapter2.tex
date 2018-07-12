@@ -388,7 +388,39 @@ Thus
 \end{align*}
 
 
-
+\Textbf{2.17}
+\begin{proof}
+	($\Rightarrow$) Suppose $A$ is Hermitian. Then $A=A^\dagger$.
+	Let $\ket{\lambda}$ be eigenvectors of $A$ with eigenvalues $\lambda$, that is,
+	\begin{align*}
+		A \ket{\label{text}} = \lambda \ket{\lambda}.
+	\end{align*}
+	Therefore 
+	\begin{align*}
+		\braket{\lambda | A | \lambda} = \lambda \braket{\lambda | \lambda} = \lambda.
+	\end{align*}
+	On the other hand,
+	\begin{align*}
+		\lambda^*  = \braket{\lambda | A | \lambda}^* 
+								= \braket{\lambda | A^\dagger |  \lambda}
+								= \braket{\lambda | A | \lambda}
+								= \lambda \braket{\lambda | \lambda} = \lambda.
+	\end{align*}
+	Hence eigenvalues of Hermitian matrix are real.
+	
+	($\Leftarrow$) Suppose eigenvalues of $A$ are real. From spectral theorem, normal matrix $A$ can be written by
+	\begin{align}
+		A= \sum_i \lambda_i \kb{\lambda_i}
+	\end{align}
+	where $\lambda_i$ are  real eigenvalues with eigenvectors $\ket{\lambda_i}$.
+	By taking adjoint, we get
+	\begin{align*}
+		A^\dagger &= \sum_i \lambda_i^* \kb{\lambda_i}\\
+								&= \sum_i \lambda_i \kb{\lambda_i}~~~(\because \lambda_i \text{ are real})\\
+								&= A
+	\end{align*}
+	Thus $A$ is Hermitian.
+\end{proof}
 
 \Textbf{2.18}
 
@@ -532,7 +564,7 @@ Therefore $A = A^\dagger$.
 	\end{proof}
 
 	\begin{thm}
-		If $(v, Av) = 0$ for all $v \in V$, then $A = 0$.
+		If $(v, Av) = 0$ for all $v \in V$, then $A = 0$. \label{thm:zerooperator}
 	\end{thm}
 
 	\begin{proof}
@@ -1564,7 +1596,7 @@ Eigenvalues are $\lambda = \pm 1$.
 		\end{bmatrix}
 \end{align*}
 
-Eigenvector is $\ket{\lambda_1} = \sqrt{ \frac{1+v_3}{2 }} \begin{bmatrix}
+Normalized eigenvector is $\ket{\lambda_1} = \sqrt{ \frac{1+v_3}{2 }} \begin{bmatrix}
 1 \\
 \frac{1-v_3}{v_1 - iv_2}
 \end{bmatrix} $.
@@ -1609,7 +1641,7 @@ Eigenvector is $\ket{\lambda_1} = \sqrt{ \frac{1+v_3}{2 }} \begin{bmatrix}
 	\end{bmatrix}
 \end{align*}
 
-Eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{bmatrix}
+Normalized eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{bmatrix}
     1 \\
     - \frac{1+v_3}{v_1 - iv_2}
 \end{bmatrix} $.
@@ -1642,6 +1674,79 @@ Eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{bmatrix}
 \end{align*}
 
 
+	While I review my proof, I notice that my proof has a defect.
+	The case $(v_1,v_2,v_3) = (0,0,1)$, second component of eigenstate, $\frac{1-v_3}{v_1 - iv_2}$, diverges.
+	So I implicitly assume $v_1 - iv_2 \neq 0$. Hence my proof is incomplete.
+	
+	Since the exercise doesn't require explicit form of projector, we should prove the problem more abstractly.
+	In order to prove, we use the following properties of $\vec{v} \cdot \vec{\sigma}$ 
+	\begin{itemize}
+		\item $\vec{v} \cdot \vec{\sigma}$ is Hermitian
+		\item $(\vec{v} \cdot \vec{\sigma})^2 = I$ where $\vec{v}$ is a real unit vector.
+	\end{itemize}
+	
+	We can easily check above conditions.
+	\begin{align*}
+	(\vec{v} \cdot \vec{\sigma})^\dagger &= (v_1 \sigma_1 + v_2 \sigma_2 + v_3 \sigma_3)^\dagger\\
+	&= v_1 \sigma_1^\dagger + v_2 \sigma_2^\dagger + v_3 \sigma_3^\dagger\\
+	&= v_1 \sigma_1 + v_2 \sigma_2 + v_3 \sigma_3~~~(\because \text{Pauli matrices are Hermitian.})\\
+	&= \vec{v} \cdot \vec{\sigma}
+	\end{align*}
+	
+	\begin{align*}
+	(\vec{v} \cdot \vec{\sigma})^2 &= \sum_{j,k=1}^3 (v_j \sigma_j)  (v_k \sigma_k)\\
+	&= \sum_{j,k=1}^3 v_j v_k \sigma_j \sigma_k\\
+	&= \sum_{j,k=1}^3 v_j v_k \left(\delta_{jk}I + i \sum_{l=1}^3 \epsilon_{jkl}\sigma_l \right) ~~~(\because \text{eqn}(2.78)~ \text{page} 78)\\
+	&= \sum_{j,k=1}^3 v_j v_k \delta_{jk}I  + i \sum_{j,k,l=1}^3 \epsilon_{jkl} v_j v_k \sigma_l\\
+	&= \sum_{j=1}^3 v_j^2 I\\
+	&= I ~~~\left(\because \sum_j v_j^2 = 1 \right)
+	\end{align*}
+	
+	
+	\begin{proof}
+		Suppose $\ket{\lambda}$ is an eigenstate of $\vec{v} \cdot \vec{\sigma}$ with eigenvalue $\lambda$. Then
+		\begin{align*}
+		\vec{v} \cdot \vec{\sigma} \ket{\lambda} = \lambda \ket{\lambda}\\
+		(\vec{v} \cdot \vec{\sigma})^2 \ket{\lambda} = \lambda^2 \ket{\lambda}
+		\end{align*}
+		On the other hand $(\vec{v} \cdot \vec{\sigma})^2 = I$,
+		\begin{align*}
+		(\vec{v} \cdot \vec{\sigma})^2 \ket{\lambda} = I \ket{\lambda} = \ket{\lambda}\\
+		\therefore \lambda^2\ket{\lambda} = \ket{\lambda}.
+		\end{align*}
+		Thus $\lambda^2 = 1 \Rightarrow \lambda = \pm 1$. Therefore $\vec{v} \cdot \vec{\sigma}$ has eigenvalues $\pm 1$.
+		
+		Let $\ket{\lambda_1}$ and $\ket{\lambda_{-1}}$ are eigenvectors with eigenvalues $1$ and $-1$, respectively.
+		I will prove that $P_\pm = \kb{\lambda_{\pm 1}}$.
+		
+		In order to prove above equation, all we have to do is prove following condition. (see Theorem \ref{thm:zerooperator})
+		\begin{screen}
+			\begin{align}
+				\braket{\psi | (P_\pm - \kb{\lambda_{\pm 1}})| \psi} = 0 \text{ for all } \ket{\psi} \in \mathds{C}^2.
+			\end{align}
+		\end{screen}
+		
+		Since $\vec{v} \cdot \vec{\sigma}$ is Hermitian, $\ket{\lambda_1}$ and $\ket{\lambda_{-1}}$ are orthonormal vector ($\because $ Exercise 2.22).
+		Let $\ket{\psi} \in \mathds{C}^2$ be an arbitrary state. $\ket{\psi}$ can be written as
+		\begin{align*}
+		\ket{\psi} = \alpha \ket{\lambda_1} + \beta \ket{\lambda_{\pm 1}} ~~(|\alpha|^2 + |\beta|^2 = 1, \alpha, \beta \in \mathds{C}).
+		\end{align*}
+		
+		\begin{align*}
+		\braket{\psi | (P_{\pm} - \kb{\lambda_\pm})| \psi} 
+		%		&= \braket{\psi | \left(\frac{1}{2} (I \pm \vec{v} \cdot \vec{\sigma}) - \kb{\lambda_\pm}\right)| \psi}\\
+		&= \braket{\psi | P_\pm | \psi} - \braket{\psi | \lambda_\pm} \braket{\lambda_\pm | \psi}.\\
+		\braket{\psi | P_\pm | \psi} &= \braket{\psi | \frac{1}{2}(I \pm \vec{v} \cdot \vec{\sigma}) | \psi}\\
+		&= \frac{1}{2} \pm \frac{1}{2} \braket{\psi | \vec{v} \cdot \vec{\sigma})| \psi}\\
+		&= \frac{1}{2} \pm \frac{1}{2} (|\alpha|^2 - |\beta|^2)\\
+		&= \frac{1}{2} \pm \frac{1}{2} (2|\alpha|^2 - 1) ~~~(\because |\alpha|^2 + |\beta|^2 = 1)\\
+		\braket{\psi | \lambda_1} \braket{\lambda_1 | \psi} &= |\alpha|^2\\
+		\braket{\psi | \lambda_{-1}} \braket{\lambda_{-1}| \psi} &= |\beta|^2 = 1  - |\alpha|^2
+		\end{align*}
+		
+		Therefore $\braket{\psi | (P_\pm - \kb{\lambda_{\pm 1}})| \psi} = 0$ for all $\ket{\psi} \in \mathds{C}^2$.
+		Thus $P_\pm = \kb{\lambda_{\pm 1}}$.
+	\end{proof}
 
 \Textbf{2.61}
 \begin{align*}
@@ -1673,7 +1778,7 @@ Post-measurement state is
 
 \Textbf{2.62}
 
-Suppose $M_m$ is an measurement operator.
+Suppose $M_m$ is a measurement operator.
 From the assumption, $E_m = M_m^\dagger M_m = M_m$.
 
 Then
