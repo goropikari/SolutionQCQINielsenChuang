@@ -1,0 +1,254 @@
+\chapter{Distance measures for quantum information}
+\Textbf{9.1}
+\begin{align*}
+	D((1,0), (1/2,1/2)) &= \frac{1}{2} \left( |1 - 1/2| + |0 - 1/2| \right)\\
+		&= \frac{1}{2} \left(\frac{1}{2} +  \frac{1}{2} \right)\\
+		&= \frac{1}{2}
+\end{align*}
+
+\begin{align*}
+	D\left( (1/2,1/3,1/6), (3/4, 1/8, 1/8)  \right) &= \frac{1}{2} \left( |1/2 - 3/4| + |1/3 - 1/8| + |1/6 - 1/8| \right)\\
+		&= \frac{1}{2} \left( 1/4 + 5 / 24 + 1/24 \right)\\
+		&= \frac{1}{4}
+\end{align*}
+
+
+
+\Textbf{9.2}
+\begin{align*}	
+	D\left((p,1-p), (q, 1-q)\right) &= \frac{1}{2} \left( |p-q| + |(1-p) - (1-q)| \right)\\
+		&= \frac{1}{2} \left( |p-q| + |-p + q| \right)\\
+		&= |p-q| 
+\end{align*}
+
+
+\Textbf{9.3}
+\begin{align*}
+	F((1,0), (1/2,1/2)) = \sqrt{1 \cdot 1/2} + \sqrt{0 \cdot 1/2} = \frac{1}{\sqrt{2}}
+\end{align*}
+
+\begin{align*}
+	F\left( (1/2,1/3,1/6), (3/4, 1/8, 1/8)  \right) &= \sqrt{1/2 \cdot 3/4} + \sqrt{1/3 \cdot 1/8} + \sqrt{1/6 \cdot 1/8}\\
+		&= \frac{4 \sqrt{6} + \sqrt{3}}{12}
+\end{align*}
+
+
+
+\Textbf{9.4}
+
+Define $r_x = p_x - q_x$. Let $U$ be the whole index set.
+\begin{align*}
+	\max_S |p(S) - q(S)| &= \max_S \left|\sum_{x \in S} p_x - \sum_{x \in S} q_x \right|\\
+		&= \max_S \left|\sum_{x \in S} (p_x -  q_x) \right|\\
+		&= \max_S \left|\sum_{x \in S} r_x \right|
+\end{align*}
+
+
+Since $\sum_{x \in S} r_x $ is written as
+\begin{align}
+	\sum_{x \in S} r_x = \sum_{\substack{x \in S\\  r_x \geq 0}} r_x + \sum_{\substack{x \in S\\ r_x < 0}} r_x,\label{eq:subsettracedist}
+\end{align}
+$\left|\sum_{x \in S} r_x \right|$ is maximized when $S = \{x \in U | r_x \geq 0  \}$ or $S = \{x \in U | r_x < 0  \}$.
+
+Define $S_+ = \{x \in U | r_x \geq 0  \}$ and $S_- = \{x \in U | r_x < 0  \}$.
+
+Now the sum of all $r_x$ is 0,
+\begin{align*}
+	&\sum_{x \in U} r_x = \sum_{x \in S_+} r_x + \sum_{x \in S_-} r_x = 0\\
+	\therefore &\sum_{x \in S_+} r_x = - \sum_{x \in S_-} r_x.
+\end{align*} 
+
+Thus
+\begin{align}
+	\max_S \left|\sum_{x \in S} r_x \right| = \sum_{x \in S_+} r_x = - \sum_{x \in S_-} r_x \label{eq:probtracedist}.
+\end{align}
+
+On the other hand,
+\begin{align}
+	D(p_x, q_x) &= \frac{1}{2} \sum_{x \in U} |p_x - q_x|\nonumber\\
+		&= \frac{1}{2} \sum_{x \in U} |r_x|\nonumber\\
+		&= \frac{1}{2} \sum_{x \in S_+} |r_x| + \frac{1}{2} \sum_{x \in S_-} |r_x|\nonumber\\
+		&= \frac{1}{2} \sum_{x \in S_+} r_x - \frac{1}{2} \sum_{x \in S_-} r_x\nonumber\\
+		&= \frac{1}{2} \sum_{x \in S_+} r_x + \frac{1}{2} \sum_{x \in S_+} r_x ~~~(\because \text{eqn} (\ref{eq:probtracedist}))\nonumber\\
+		&= \sum_{x \in S_+} r_x \nonumber\\
+		&= \max_S \left|\sum_{x \in S} r_x \right|.\nonumber
+\end{align}
+
+Therefore $D(p_x, q_x) = \max_S \left|\sum_{x \in S} p_x - \sum_{x \in S}q_x \right| = \max_S |p(S) - q(S)|$.
+
+\Textbf{9.5}
+From eqn (\ref{eq:subsettracedist}) and (\ref{eq:probtracedist}), maximizing $\left|\sum_{x \in S} r_x \right|$ is equivalent to 
+maximizing $\sum_{x \in S} r_x$.
+
+Hence
+\begin{align*}
+	D(p_x, q_x) = \max_S (p(S) - q(S)) = \max_S \left(\sum_{x \in S} p_x - \sum_{x \in S}q_x \right).
+\end{align*}
+
+
+
+\Textbf{9.6}
+
+Define $\rho = \frac{3}{4}\kb{0} + \frac{1}{4}\kb{1}$, $\sigma = \frac{2}{3} \kb{1} + \frac{1}{3}\kb{1}$.
+\begin{align*}
+	D(\rho, \sigma) &= \frac{1}{2} \Tr |\rho - \sigma|\\
+		&= D((3/4, 1/4), (2/3, 1/3))\\
+		&= \frac{1}{2} \left(\left| \frac{3}{4} - \frac{2}{3}  \right| +\left| \frac{1}{4} - \frac{1}{3} \right| \right)\\
+		&= \frac{1}{2} \left( \frac{1}{12} + \frac{1}{12} \right)\\
+		&= \frac{1}{12}
+\end{align*}
+
+
+Define $\rho = \frac{3}{4}\kb{0} + \frac{1}{4}\kb{1}$, $\sigma = \frac{2}{3} \kb{+} + \frac{1}{3}\kb{-}$.
+\begin{align*}
+	\kb{+} &= \frac{1}{2} (\kb{0} + \kbt{0}{1} + \kbt{1}{0} + \kb{1})\\
+	\kb{-} &= \frac{1}{2} (\kb{0} - \kbt{0}{1} - \kbt{1}{0} + \kb{1})
+\end{align*}
+
+\begin{align*}
+	\rho - \sigma &= \left(\frac{3}{4} - \frac{1}{2}\right) \kb{0} - \frac{1}{6} (\kbt{0}{1} + \kbt{1}{0}) + \left(\frac{1}{4} - \frac{1}{2}\right) \kb{1}\\
+		&= \frac{1}{4} \kb{0} - \frac{1}{6} (\kbt{0}{1} + \kbt{1}{0}) - \frac{1}{4} \kb{1}\\
+\end{align*}
+
+\begin{align*}
+	(\rho - \sigma)^\dagger (\rho - \sigma) &= \frac{1}{4^2} \kb{0} - \frac{1}{4\cdot 6} \kbt{0}{1} + \frac{1}{6^2} \kb{0} + \frac{1}{6 \cdot 4} \kbt{0}{1} - \frac{1}{4\cdot 6} \kbt{1}{0} + \frac{1}{6^2} \kb{1} + \frac{1}{4\cdot 6} \kbt{1}{0} + \frac{1}{4^2} \kb{1}\\
+		&= \left(\frac{1}{4^2} + \frac{1}{6^2}\right) (\kb{0} + \kb{1})
+\end{align*}
+
+
+\begin{align*}
+	D(\rho, \sigma) &= \frac{1}{2} \Tr |\rho - \sigma|\\
+		&= \sqrt{\frac{1}{4^2} + \frac{1}{6^2}}
+\end{align*}
+
+
+
+\Textbf{9.7}
+
+Since $\rho - \sigma$ is Hermitian, we can apply spectral decomposition.
+Then $\rho - \sigma$ is written as
+\begin{align*}
+	\rho - \sigma &= \sum_{i=1}^k \lambda_i \kb{i} + \sum_{i=k+1}^{n} \lambda_i \kb{i}
+\end{align*}
+where $\lambda_i$ are  positive eigenvalues for $i = 1, \cdots, k$ and negative eigenvalues for $i = k+1, \cdots, n$.
+
+Define $Q = \sum_{i=1}^k \lambda_i \kb{i}$ and $S = -\sum_{i=k+1}^{n} \lambda_i \kb{i}$.
+Then $P$ and $S$ are positive operator. Therefore $\rho - \sigma = P - S$.
+
+\begin{screen}
+	Proof of $|\rho - \sigma| = Q + S$.
+	\begin{align*}
+		|\rho- \sigma| &= |Q - S|\\
+			&= \sqrt{(Q-S)^\dagger (Q-S)}\\
+			&= \sqrt{(Q-S)^2}\\
+			&= \sqrt{Q^2 - QS - SQ + S^2}\\
+			&= \sqrt{Q^2 + S^2}\\
+			&= \sqrt{\sum_i \lambda_i^2 \kb{i}}\\
+			&= \sum_i |\lambda_i| \kb{i}\\
+			&= Q + S
+	\end{align*}
+\end{screen}
+
+\Textbf{9.8}
+
+Suppose $\sigma = \sigma_i$. Then $\sigma = \sum_i p_i \sigma_i$.
+\begin{align}
+	D \left( \sum_i p_i \rho_i, \sigma\right) &= D \left( \sum_i p_i \rho_i, \sum_i p_i \sigma_i\right)\\
+		&\leq \sum_i p_i D(\rho_i, \sigma_i) ~~~ (\because \text{eqn}(9.50))\\
+		&= \sum_i p_i D(\rho_i, \sigma).~~(\because \text{assumption}).
+\end{align}
+
+\Textbf{9.9}
+\Textbf{9.10}
+\Textbf{9.11}
+\Textbf{9.12}
+
+Suppose $\rho = \frac{1}{2} (I + \vec{r}\cdot \vec{\sigma})$ and $\sigma = \frac{1}{2} (I + \vec{s}\cdot \vec{\sigma})$ where $\vec{v}$ and $\vec{s}$ are real vectors s.t. $|\vec{v}|, |\vec{s}| \leq 1$.
+
+\begin{align*}
+	\mathcal{E} (\rho) = p \frac{I}{2} + (1-p) \rho, ~~~
+	\mathcal{E}(\sigma) = p \frac{I}{2} + (1-p) \sigma.
+\end{align*}
+
+\begin{align*}
+	D(\mathcal{E}(\rho), \mathcal{E}(\sigma)) &= \frac{1}{2} \Tr |\mathcal{E}(\rho) -  \mathcal{E}(\sigma)|\\
+		&= \frac{1}{2} \Tr |(1-p)(\rho - \sigma)|\\
+		&= \frac{1}{2}(1-p) \Tr |\rho - \sigma|\\
+		&= (1-p) D(\rho, \sigma)\\
+		&= (1-p) \frac{|\vec{r} - \vec{s}|}{2}
+\end{align*}
+
+Is this strictly contractive?
+
+\Textbf{9.13}
+
+Bit flip channel $E_0 = \sqrt{p} I$,  $E_1 = \sqrt{1-p}\sigma_x$.
+\begin{align*}
+	\mathcal{E}(\rho) &= E_0 \rho E_0^\dagger + E_1 \rho E_1^\dagger\\
+		&= p \rho + (1-p) \sigma_x \rho \sigma_x.
+\end{align*}
+
+Since $\sigma_x \sigma_x \sigma_x = \sigma_x$, $\sigma_x \sigma_y \sigma_x = -\sigma_y$ and $\sigma_x \sigma_z \sigma_x = -\sigma_z$, then $\sigma_x (\vec{r} \cdot \vec{\sigma}) = r_1 \sigma_x - r_2 \sigma_y - r_3 \sigma_3$.
+
+Thus
+\begin{align*}
+	D(\mathcal{E}(\rho), \mathcal{E}(\sigma)) &= \frac{1}{2} \Tr |\mathcal{E}(\rho) -  \mathcal{E}(\sigma)|\\
+		&= \frac{1}{2} \Tr |p(\rho - \sigma) + (1-p) (\sigma_x \rho \sigma_x - \sigma_x \sigma \sigma_x) |\\
+		&\leq \frac{1}{2}p \Tr |\rho - \sigma | + \frac{1}{2} (1-p) \Tr |\sigma_x (\rho - \sigma) \sigma_x|\\
+		&= pD(\rho, \sigma) +  (1-p) D(\sigma_x \rho \sigma_x, \sigma_x \sigma \sigma_x)\\
+		&= D(\rho, \sigma)~~~(\because \text{eqn}(9.21)).
+\end{align*}
+
+
+Suppose $\rho_0 = \frac{1}{2}(I + \vec{r}\cdot \vec{\sigma})$ is a fixed point. Then
+\begin{align*}
+	&\rho_0 = \mathcal{E}(\rho_0) =p \rho_0 + (1-p) \sigma_x \rho_0 \sigma_x\\
+	\therefore~ &(1-p) \rho_0 - (1-p) \sigma_x \rho_0 \sigma_x = 0\\
+	\therefore~ &(1-p) (\rho - \sigma_x \rho_0 \sigma_x) = 0\\
+	\therefore~ &\rho_0 = \sigma_x \rho_0 \sigma_x\\
+	\therefore~ &\frac{1}{2} (I + r_1 \sigma_x + r_2 \sigma_y + r_3 \sigma_z)  \frac{1}{2} (I + r_1 \sigma_x - r_2 \sigma_y - r_3 \sigma_z)
+\end{align*}
+
+Since $\{I, \sigma_x, \sigma_y, \sigma_z \}$ are linearly independent, $r_2 = -r_2$ and $r_3 = - r_3$. Thus $r_2 = r_3 = 0$.
+
+Therefore the set of fixed points for the bit flip channel is $\{\rho~ |~ \rho = \frac{1}{2}(I + r \sigma_x), |r| \leq 1, r \in \mathds{R} \}$
+
+
+\Textbf{9.14}
+
+\begin{align*}
+	F(U \rho U^\dagger, U \sigma U^\dagger) &= \Tr \sqrt{(U\rho U^\dagger)^{1/2} \sigma (U \rho U^\dagger)}\\
+		&= \Tr \sqrt{U \rho^{1/2} \sigma \rho^{1/2} U^\dagger}\\
+		&= \Tr (U \sqrt{\rho^{1/2} \sigma \rho^{1/2}} U^\dagger)\\
+		&= \Tr (\sqrt{\rho^{1/2} \sigma \rho^{1/2}} U^\dagger U)\\
+		&= \Tr \sqrt{\rho^{1/2} \sigma \rho^{1/2}}\\
+		&= F(\rho, \sigma)
+\end{align*}
+
+\begin{screen}
+	I think the fact $\sqrt{UAU^\dagger} = U\sqrt{A}U^\dagger$ is not restricted for positive operator.
+	
+	Suppose $A$ is a normal matrix. From spectral theorem, it is decomposed as
+	\begin{align*}
+		A = \sum_i a_i \kb{i}.
+	\end{align*}
+	
+	Let $f$ be a function. Then
+	\begin{align*}
+		f(UAU^\dagger )&= f(\sum_i a_i U \kb{i} U^\dagger)\\
+			&= \sum_i f(a_i) U \kb{i} U^\dagger\\
+			&= U (\sum_i f(a_i) U \kb{i} U^\dagger) U^\dagger\\
+			&= U f(A) U^\dagger
+	\end{align*}
+\end{screen}
+
+
+\Textbf{9.15}
+\Textbf{9.16}
+\Textbf{9.17}
+\Textbf{9.18}
+\Textbf{9.19}
+\Textbf{9.20}
+\Textbf{9.21}
+\Textbf{9.22}
+\Textbf{9.23}
