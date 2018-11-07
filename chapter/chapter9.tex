@@ -15,10 +15,10 @@
 
 
 \Textbf{9.2}
-\begin{align*}	
+\begin{align*}
 	D\left((p,1-p), (q, 1-q)\right) &= \frac{1}{2} \left( |p-q| + |(1-p) - (1-q)| \right)\\
 		&= \frac{1}{2} \left( |p-q| + |-p + q| \right)\\
-		&= |p-q| 
+		&= |p-q|
 \end{align*}
 
 
@@ -56,7 +56,7 @@ Now the sum of all $r_x$ is 0,
 \begin{align*}
 	&\sum_{x \in U} r_x = \sum_{x \in S_+} r_x + \sum_{x \in S_-} r_x = 0\\
 	\therefore &\sum_{x \in S_+} r_x = - \sum_{x \in S_-} r_x.
-\end{align*} 
+\end{align*}
 
 Thus
 \begin{align}
@@ -77,7 +77,7 @@ On the other hand,
 Therefore $D(p_x, q_x) = \max_S \left|\sum_{x \in S} p_x - \sum_{x \in S}q_x \right| = \max_S |p(S) - q(S)|$.
 
 \Textbf{9.5}
-From eqn (\ref{eq:subsettracedist}) and (\ref{eq:probtracedist}), maximizing $\left|\sum_{x \in S} r_x \right|$ is equivalent to 
+From eqn (\ref{eq:subsettracedist}) and (\ref{eq:probtracedist}), maximizing $\left|\sum_{x \in S} r_x \right|$ is equivalent to
 maximizing $\sum_{x \in S} r_x$.
 
 Hence
@@ -227,12 +227,12 @@ Therefore the set of fixed points for the bit flip channel is $\{\rho~ |~ \rho =
 
 \begin{screen}
 	I think the fact $\sqrt{UAU^\dagger} = U\sqrt{A}U^\dagger$ is not restricted for positive operator.
-	
+
 	Suppose $A$ is a normal matrix. From spectral theorem, it is decomposed as
 	\begin{align*}
 		A = \sum_i a_i \kb{i}.
 	\end{align*}
-	
+
 	Let $f$ be a function. Then
 	\begin{align*}
 		f(UAU^\dagger )&= f(\sum_i a_i U \kb{i} U^\dagger)\\
@@ -245,7 +245,7 @@ Therefore the set of fixed points for the bit flip channel is $\{\rho~ |~ \rho =
 
 \Textbf{9.15}
 $\ket{\psi} = (U_R \otimes \sqrt{\rho}U_Q) \ket{m}$ is any fixed purification of $\rho$, and $\ket{\phi} = (V_R \otimes \sqrt{\sigma}V_Q) \ket{m}$ is purification of $\sigma$.
-Suppose $\sqrt{\rho} \sqrt{\sigma} = |\sqrt{\rho} \sqrt{\sigma}| V$ is the polar decomposition of $\sqrt{\rho} \sqrt{\sigma}$. Then 
+Suppose $\sqrt{\rho} \sqrt{\sigma} = |\sqrt{\rho} \sqrt{\sigma}| V$ is the polar decomposition of $\sqrt{\rho} \sqrt{\sigma}$. Then
 %
 \begin{align*}
     |\braket{\psi | \phi}| &= \left|\braket{m | \left( U_R^\dagger V_R \otimes U_Q^\dagger \sqrt{\rho} \sqrt{\sigma} V_Q \right) | m } \right|\\
@@ -264,7 +264,7 @@ Choosing $V_Q = V^\dagger$, $V_R^T = (U_Q^* U_R^\dagger)^\dagger$ we see that eq
 \Textbf{9.16}
 I think eq (9.73) has a typo. $\Tr (A^\dagger B) = \braket{m | A \otimes B | m}$ should be $\Tr (A^{\textcolor{red}{T}} B) = \braket{m | A \otimes B | m}$. See errata list.
 
-In order to show that this exercise, I will prove following two properties, 
+In order to show that this exercise, I will prove following two properties,
 \begin{align*}
     \Tr(A) = \braket{m | (I \otimes A) | m}, ~~ (I \otimes A)\ket{ m} = (A^T \otimes I)\ket{m}
 \end{align*}
@@ -314,7 +314,7 @@ For $0 \leq x \leq y \leq 1$, $\arccos(x) \geq \arccos(y)$. From $F(\mathcal{E}(
 \begin{align*}
     \arccos F(\mathcal{E}(\rho), \mathcal{E}(\sigma)) &\geq \arccos F(\rho, \sigma)\\
     \therefore A (\mathcal{E}(\rho), \mathcal{E}(\sigma)) &\geq A(\rho, \sigma)
-\end{align*} 
+\end{align*}
 
 
 
@@ -327,7 +327,7 @@ From eq (9.92)
 
 
 \Textbf{9.20}
-Suppose $\sigma_i = \sigma$. Then 
+Suppose $\sigma_i = \sigma$. Then
 \begin{align*}
     F \left( \sum_i p_i \rho_i, \sigma \right) &= F \left( \sum_i p_i \rho_i, \sum_i p_i \sigma \right) \\
         &= F \left( \sum_i p_i \rho_i, \sum_i p_i \sigma_i \right) \\
