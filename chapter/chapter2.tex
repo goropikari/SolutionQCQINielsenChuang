@@ -1810,10 +1810,15 @@ Since $E_m$ is POVM,  for arbitrary  unitary $U$, $M_m^\dagger M_m$ is POVM.
 
 \Textbf{2.64}
 Read following paper: 
-
-Lu-Ming Duan, Guang-Can Guo.  Probabilistic cloning and identification of linearly independent quantum states. Phys. Rev. Lett.,80:4999-5002, 1998. arXiv eprint quant-ph/9804064.
-\url{https://arxiv.org/abs/quant-ph/9804064}
-
+\begin{itemize}
+    \item Lu-Ming Duan, Guang-Can Guo.  Probabilistic cloning and identification of linearly independent quantum states. Phys. Rev. Lett.,80:4999-5002, 1998. arXiv:quant-ph/9804064\\
+    \url{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.80.4999}\\
+    \url{https://arxiv.org/abs/quant-ph/9804064}
+%    
+    \item Stephen M. Barnett, Sarah Croke, Quantum state discrimination, arXiv:0810.1970 [quant-ph]\\
+    \url{https://arxiv.org/abs/0810.1970}\\
+    \url{https://www.osapublishing.org/DirectPDFAccess/67EF4200-CBD2-8E68-1979E37886263936_176580/aop-1-2-238.pdf}
+\end{itemize}
 
 
 \Textbf{2.65}
@@ -2045,15 +2050,41 @@ Conversely, if $|\vec{r}| = 1$, then $\Tr (\rho^2) = \frac{1}{4} (2 + 2|\vec{r}|
     \Textbf{Theorem 2.6}
 %
     \begin{align*}
-        \rho = \sum_i p_i \kb{\psi_i} = \sum_i \kb{\tilde{\psi_i}} = \sum_j \kb{\tilde{\varphi}_j} = \sum_j q_j \kb{\varphi_j} ~~ \Leftrightarrow ~~ \ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}
+        \rho = \sum_i p_i \kb{\psi_i} 
+            = \sum_i \kb{\tilde{\psi_i}} 
+            = \sum_j \kb{\tilde{\varphi}_j} 
+            = \sum_j q_j \kb{\varphi_j} 
+                ~~ \Leftrightarrow ~~ 
+            \ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}
     \end{align*}
     where $u$ is unitary.
 
-	Transformation in theorem 2.6, $\ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}$, corresponds to
+	The-transformation in theorem 2.6, $\ket{\tilde{\psi}_i} = \sum_j u_{ij} \ket{\tilde{\varphi}_j}$, corresponds to
 	\begin{align*}
 	    \left[ \ket{\tilde{\psi}_1} \cdots \ket{\tilde{\psi}_k} \right] = \Big[ \ket{\tilde{\varphi}_1} \cdots \ket{\tilde{\varphi}_k} \Big] U^T
 	\end{align*}
 	where $k = \mathrm{rank} (\mathcal{\rho})$.
+    \begin{align}
+        \sum_i \kb{\tilde{\psi_i}} &= \left[ \ket{\tilde{\psi}_1} \cdots \ket{\tilde{\psi}_k} \right]
+            \begin{bmatrix}
+                \bra{\tilde{\psi_1}}\\
+                \vdots\\
+                \bra{\tilde{\psi_k}}
+            \end{bmatrix}\\
+        &= \Big[ \ket{\tilde{\varphi}_1} \cdots \ket{\tilde{\varphi}_k} \Big] U^T
+            U^* \begin{bmatrix}
+                    \bra{\tilde{\varphi}_1}\\
+                    \vdots\\
+                    \bra{\tilde{\varphi}_k}
+            \end{bmatrix}\\
+        &= \Big[ \ket{\tilde{\varphi}_1} \cdots \ket{\tilde{\varphi}_k} \Big]
+             \begin{bmatrix}
+                \bra{\tilde{\varphi}_1}\\
+                \vdots\\
+                \bra{\tilde{\varphi}_k}
+            \end{bmatrix}\\
+        &= \sum_j \kb{\tilde{\varphi}_j}.
+    \end{align}
 \end{screen}
 
 From spectral theorem, density matrix $\rho$ is decomposed as $\rho = \sum_{k=1}^{d} \lambda_k \kb{k}$ where $d = \dim \mathcal{H}$.
