@@ -66,6 +66,26 @@ $H_{\text{bin}}(p) = - p\log p - (1-p) \log (1-p)$.
 
 \Textbf{11.4}
 \Textbf{11.5}
+
+\begin{align}
+    H\left( p(x,y) || p(x)p(y) \right)
+        &= \sum_{x,y} p(x,y) \log \frac{p(x) p(y)}{p(x,y)}\\
+        &= - H(p(x,y)) - \sum_{x,y} p(x,y) \log \left[ p(x)p(y) \right]\\
+        &= - H(p(x,y)) - \sum_{x,y} p(x,y) \left[ \log p(x) + \log p(y) \right]\\
+        &= - H(p(x,y)) - \sum_{x,y} p(x,y) \log p(x) - \sum_{x,y} p(x,y) \log p(y)\\
+        &= - H(p(x,y)) - \sum_{x} p(x) \log p(x) - \sum_{y} p(y) \log p(y)\\
+        &= - H(p(x,y)) + H(p(x)) + H(p(y))\\
+        &= - H(X,Y) + H(X) + H(Y).
+\end{align}
+
+From the non-negativity of the relative entropy,
+\begin{align}
+    H(X) +  H(Y) - H(X,Y) \geq 0\\
+    \therefore H(X) + H(Y) \geq H(X,Y).
+\end{align}
+
+
+
 \Textbf{11.6}
 \Textbf{11.7}
 \Textbf{11.8}
