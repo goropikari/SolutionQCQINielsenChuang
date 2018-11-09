@@ -1,0 +1,95 @@
+\chapter{Entropy and information}
+\Textbf{11.1}
+Fair coin:
+
+\begin{align}
+    H({1/2, 1/2}) = \left( - \frac{1}{2} \log \frac{1}{2} \right) \times 2 = 1
+\end{align}
+
+
+Fair die:
+\begin{align}
+    H(p) = \left( - \frac{1}{6} \log \frac{1}{6} \right) \times 6 = \log 6.
+\end{align}
+
+
+The entropy decreases if the coin or die is unfair.
+
+
+
+\Textbf{11.2}
+
+From assumption $I(pq) = I(p) + I(q)$.
+
+\begin{align}
+    \frac{\partial I(pq)}{\partial p} &= \frac{\partial I(p)}{\partial p} + 0 = \frac{\partial I(p)}{\partial p}\\
+    \frac{\partial I(pq)}{\partial q} &= 0 + \frac{\partial I(q)}{\partial q} = \frac{\partial I(q)}{\partial q}
+\end{align}
+
+
+\begin{align}
+    \frac{\partial I(pq)}{\partial p}
+        &=  \frac{\partial I(pq)}{\partial (pq)} \frac{\partial (pq)}{\partial p}
+        = q \frac{\partial I(pq)}{\partial(pq)}
+    \Rightarrow \frac{\partial I(pq)}{\partial(pq)} = \frac{1}{q} \frac{\partial I(p)}{\partial p}\\
+%
+    \frac{\partial I(pq)}{\partial q}
+        &=  \frac{\partial I(pq)}{\partial (pq)} \frac{\partial (pq)}{\partial q}
+        = p \frac{\partial I(pq)}{\partial(pq)}
+    \Rightarrow \frac{\partial I(pq)}{\partial(pq)} = \frac{1}{p} \frac{\partial I(q)}{\partial q}
+\end{align}
+
+Thus
+\begin{align}
+    \frac{1}{q} \frac{\partial I(p)}{\partial p} &= \frac{1}{p} \frac{\partial I(q)}{\partial q}\\
+    \therefore~ p \frac{d I(p)}{d p} &= q \frac{d I(q)}{d q} ~~~\text{ for all } p,q \in [0,1].\\
+\end{align}
+
+Then $p (d I(p) / d p)$ is constant.
+
+If $p (d I(p) / d p) = k$, $k \in \mathds{R}$.
+Then $I(p) = k \ln p = k' \log p$ where $k' = k / \log e$.
+
+
+
+\Textbf{11.3}
+$H_{\text{bin}}(p) = - p\log p - (1-p) \log (1-p)$.
+
+\begin{align}
+    \frac{d H_{\text{bin}}(p)}{d p}
+        &= \frac{1}{\ln 2} \left( - \log p - 1 + \log (1-p) + 1 \right)\\
+        &= \frac{1}{\ln 2} \ln \frac{1-p}{p} = 0\\
+    \Rightarrow \frac{1-p}{p} = 1\\
+    \Rightarrow p = 1/2.
+\end{align}
+
+
+\Textbf{11.4}
+\Textbf{11.5}
+\Textbf{11.6}
+\Textbf{11.7}
+\Textbf{11.8}
+\Textbf{11.9}
+\Textbf{11.10}
+\Textbf{11.11}
+\Textbf{11.12}
+\Textbf{11.13}
+\Textbf{11.14}
+\Textbf{11.15}
+\Textbf{11.16}
+\Textbf{11.17}
+\Textbf{11.18}
+\Textbf{11.19}
+\Textbf{11.20}
+\Textbf{11.21}
+\Textbf{11.22}
+\Textbf{11.23}
+\Textbf{11.24}
+\Textbf{11.25}
+\Textbf{11.26}
+
+\Textbf{Problem 11.1}
+\Textbf{Problem 11.2}
+\Textbf{Problem 11.3}
+\Textbf{Problem 11.4}
+\Textbf{Problem 11.5}

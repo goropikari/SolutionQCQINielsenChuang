@@ -5,3 +5,6 @@
 *.toc
 *.out
 *.ilg
+*.fdb_latexmk
+*.latexmain
+reddit
