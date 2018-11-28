@@ -1,22 +1,22 @@
-\section{Eratta list}\label{errata}
+\section{Errata list}\label{errata}
 
 \begin{itemize}
     \item p.101. eq (2.150) $\rho = \sum_m p(m) \rho_m$ should be $\rho \textcolor{red}{'} = \sum_m p(m) \rho_m$.
-%    
+%
     \item p.408. eq (9.49) $\sum_i p_i D(\rho_i, \sigma_i) + D(p_i, q_i)$ should be $\sum_i p_i D(\rho_i, \sigma_i) + \textcolor[rgb]{1,0,0}{2}D(p_i, q_i)$.
-    
+
     \begin{align*}
     \text{eqn } (9.48) &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i (p_i - q_i) \Tr (P \sigma_i)\\
     &\leq \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i (p_i - q_i)~~~(\because \Tr (P \sigma_i) \leq 1)\\
     &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + 2 \frac{\sum_i (p_i - q_i)}{2}\\
     &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + 2D(p_i, q_i)
     \end{align*}
-%    
+%
     \item p.409. Exercise 9.12. If $\rho = \sigma$, then $D(\rho, \sigma) = 0$. Furthermore trace distance is non-negative. Therefore $0 \leq D(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq 0 \Rightarrow D(\mathcal{E}(\rho), \mathcal{E}(\sigma))  = 0$. So I think the map $\mathcal{E}$ is not strictly contractive. If $p \neq 1$ and $\rho \neq \sigma$, then $D(\mathcal{E}(\rho), \mathcal{E}(\sigma)) < D(\rho, \sigma)$ is satisfied.
-%    
+%
     \item p.411. Exercise 9.16. eqn(9.73) $\Tr (A^\dagger B) = \braket{m | A \otimes B | m}$ should be $\Tr (A^{\textcolor{red}{T}} B) = \braket{m | A \otimes B | m}$.
-    
-    Simple counter example is the case that 
+
+    Simple counter example is the case that
     $A = \begin{bmatrix}
         i & 0\\
         0 & 0
@@ -24,7 +24,7 @@
     $B = \begin{bmatrix}
         1 & 0\\
         0 & 0
-    \end{bmatrix}$, 
+    \end{bmatrix}$,
     In this case,
     \begin{align*}
         A^\dagger B &=
@@ -40,9 +40,9 @@
             -i & 0\\
             0 & 0
         \end{bmatrix},\\
-%        
+%
         \Tr (A^\dagger B)& = -i,\\
-%        
+%
         A \otimes B &= \begin{bmatrix}
             i & 0 & 0 & 0\\
             0 & 0 & 0 & 0\\
@@ -52,17 +52,19 @@
         \braket{m | A \otimes B | m} &= (\bra{00} + \braket{11}) (A \otimes B) (\ket{00} + \ket{11}) = i.
     \end{align*}
     Thus $\Tr(A^\dagger B) \neq \braket{m | A \otimes B | m}$.
-    
+
     By using following relation, we can prove.
     \begin{align*}
         (I \otimes A) \ket{m} = (A^T \otimes I) \ket{m}\\
         \Tr (A) = \braket{m | I \otimes A | m}
     \end{align*}
-%    
+%
     \begin{align*}
         \Tr (A^T B) = \Tr(BA^T) &= \braket{m | I \otimes BA^T |m}\\
             &= \braket{m | (I \otimes B)(I \otimes A^T) |m}\\
             &= \braket{m | (I \otimes B)(A \otimes I) |m}\\ 
             &= \braket{m | A \otimes B | m}.
     \end{align*}
+
+    \item p.515. eqn (11.67) $S(\rho' || \rho)$ should be $S(\rho || \rho \textcolor{red}{'})$.
 \end{itemize}
