@@ -4,9 +4,11 @@ This is unofficial solution manual for "[Quantum Computation and Quantum Informa
 
 There is no guarantee that these solutions are correct.
 
+If you have some comment, please feel free to open an issue or a PR.
 
 ## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
 
 ## Solved exercises
 
@@ -78,7 +80,7 @@ There is no guarantee that these solutions are correct.
 - [ ] 2.64
 - [x] 2.65
 - [x] 2.66
-- [ ] 2.67 Unsolved
+- [x] 2.67
 - [x] 2.68
 - [x] 2.69
 - [x] 2.70

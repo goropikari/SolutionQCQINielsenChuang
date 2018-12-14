@@ -1843,19 +1843,19 @@ Read following paper:
 
 \Textbf{2.67}
 
-Unsolved
+Let $\ket{w_i},\ket{w_j'},\ket{u_j'}$ be orthonormal bases for $W$, $W^\perp$, $( \mathrm{Im} U )^\perp$, respectively.
 
-$W \subset V \rightarrow V = W \oplus W^\perp$.
+Define $U'$ as $U'|_W\ket{w_i} = U\ket{w_i} (= \ket{u_i})$ and $U'|_{W^\perp}\ket{w_j'} = \ket{u_j'}$
 
-$U: W \rightarrow V$, $U': V \rightarrow V$.
-
-$U' \ket{w} = U\ket{w}$
-
-$U' \in \mathcal{L}(V)$
-
-$U \in \mathcal{L}(W)$
-
-$U' = U \oplus I$ ???
+Then for all $\ket{w}$ in $W$, $U'\ket{w} = U\ket{w}$,
+and for any $\ket{v_1} = \sum_{i,j} w_i^{(1)}\ket{w_i}+w_j'^{(1)}\ket{w_j'}$
+and $\ket{v_2} = \sum_{i,j} w_i^{(2)}\ket{w_i}+w_j'^{(2)}\ket{w_j'}$ in $V$,
+\begin{align*}
+    \braket{v_1|U'^{\dagger}U'|v_2} &= (U'\ket{v_1}, U'\ket{v_2}) \\
+    &= \left( \sum_{i,j}w_i^{(1)}\ket{u_i}+w_j'^{(1)}\ket{u_j'},~ \sum_{i,j}w_i^{(2)}\ket{u_i}+w_j'^{(2)}\ket{u_j'} \right) \\
+    &= \sum_{i,j} \left( w_i^{(1)} \right)^* w_i^{(2)} + \left( w_j'^{(1)} \right)^* w_j'^{(2)} \\
+    &= \braket{v_1|v_2}.
+\end{align*}
 
 
 \Textbf{2.68}
