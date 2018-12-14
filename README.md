@@ -162,11 +162,11 @@ There is no guarantee that these solutions are correct.
 - [ ] Problem 3
 
 ### Chapter 11
-- [ ] 11.1
-- [ ] 11.2
-- [ ] 11.3
+- [x] 11.1
+- [x] 11.2
+- [x] 11.3
 - [ ] 11.4
-- [ ] 11.5
+- [x] 11.5
 - [ ] 11.6
 - [ ] 11.7
 - [ ] 11.8
