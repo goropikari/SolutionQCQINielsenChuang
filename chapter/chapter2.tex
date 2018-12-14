@@ -2299,7 +2299,7 @@ Then
 
 Let $\ket{\psi} = \sum_i \lambda_i \ket{\psi_i}_A \ket{\psi_i}_B$ and $\ket{\varphi} = \sum_i \lambda_i \ket{\varphi_i}_A \ket{\varphi_i}_B$.
 
-Define $U = \sum_i \kbt{\psi_j}{\varphi_j}_A$ and $V = \sum_j \kbt{\psi_j}{\varphi_j}$.
+Define $U = \sum_i \kbt{\psi_j}{\varphi_j}_A$ and $V = \sum_j \kbt{\psi_j}{\varphi_j}_B$.
 
 Then
 \begin{align*}
@@ -2311,15 +2311,46 @@ Then
 
 \Textbf{2.81}
 
-Suppose $\rho_A = \Tr_R \kb{AR_2} = \sum_i \lambda_i \kb{i}$. Define $\ket{AR_1} = (I_A \otimes U_R) \ket{AR_2}$.
-\begin{align*}
-	\Tr_R (\kb{AR_1}) &= \Tr_R \left( (I_A \otimes U_R) \kb{AR_2} (I_A \otimes U_R^\dagger)  \right)\\
-		&= \Tr_R \left( \kb{AR_2} (I_A \otimes U_R^\dagger) (I_A \otimes U_R) \right)\\
-		&= \Tr_R ( \kb{AR_2} )\\
-		&= \rho_A.
-\end{align*}
-Thus $\ket{AR_1}$ is also a purification of $\rho_A$.
+Let the Schmidt decomposition of $\ket{AR_1}$ be $\ket{AR_1} = \sum_i \sqrt{p_i} \ket{\psi_i^A} \ket{\psi_i^R}$ and
+let $\ket{AR_2} = \sum_i \sqrt{q_i} \ket{\phi_i^A} \ket{\phi_i^R}$.
 
+Suppose $\rho^A$ has orthonormal decomposition $\rho^A = \sum_i p_i \kb{i}$.
+
+Since $\ket{AR_1}$ and $\ket{AR_2}$ are purifications of the $\rho^A$, we have
+% \begin{align*}
+%     \ket{AR_1} &= \sum_i \sqrt{p_i} \ket{i} \ket{\psi_i}\\
+%     \ket{AR_2} &= \sum_i \sqrt{p_i} \ket{i} \ket{\phi_i}
+% \end{align*}
+% where $\ket{\psi_i}$ and $\ket{\phi_i}$ are orthonormal bases on system $R$.
+%
+\begin{align*}
+    \Tr_R (\kb{AR_1}) = \Tr_R (\kb{AR_2}) = \rho^A\\
+    \therefore \sum_i p_i \kb{\psi_i^A} = \sum_i q_i \kb{\phi_i^A} = \sum_i \lambda_i \kb{i}.
+\end{align*}
+
+The $\ket{i}$, $\ket{\psi_i^A}$, and $\ket{\psi_i^A}$ are orthonormal bases and they are eigenvectors of $\rho^A$.
+Hence without loss of generality, we can consider
+\begin{align*}
+    \lambda_i = p_i = q_i \text{ and } \ket{i} = \ket{\psi_i^A} = \ket{\phi_i^A}.
+\end{align*}
+%
+Then
+\begin{align*}
+    \ket{AR_1} = \sum_i \lambda_i \ket{i} \ket{\psi_i^R}\\
+    \ket{AR_2} = \sum_i \lambda_i \ket{i} \ket{\phi_i^R}
+\end{align*}
+Since $\ket{AR_1}$ and $\ket{AR_2}$ have same Schmidt numbers, there are two unitary operators $U$ and $V$ such that
+$\ket{AR_1} = (U \otimes V) \ket{AR_2}$ from exercise 2.80.
+
+Suppose $U = I$ and $V = \sum_i \kbt{\psi_i^R}{\phi_i^R}$.
+Then
+\begin{align*}
+    \left(I \otimes \sum_j \kbt{\psi_j^R}{\phi_j^R} \right) \ket{AR_2} &= \sum_i \lambda_i \ket{i} \left( \sum_j \ket{\psi_j^R} \braket{\phi_j^R | \phi_i^R} \right)\\
+                                                           &= \sum_i \lambda_i \ket{i} \ket{\psi_i^R}\\
+                                                           &= \ket{AR_1}.
+\end{align*}
+%
+Therefore there exists a unitary transformation $U_R$ acting on system $R$ such that $\ket{AR_1} = (I \otimes U_R) \ket{AR_2}$.
 
 
 \Textbf{2.82}
@@ -2328,37 +2359,68 @@ Thus $\ket{AR_1}$ is also a purification of $\rho_A$.
 
 Let $\ket{\psi} = \sum_i \sqrt{p_i} \ket{\psi_i} \ket{i}$.
 \begin{align*}
-	\Tr_R (\kb{\psi}) = \sum_i p_i \kb{\psi_i}
+    \Tr_R (\kb{\psi})
+        &= \sum_{i,j} \sqrt{p_i} \sqrt{p_j} \kbt{\psi_i}{\psi_j} \Tr_R (\kbt{i}{j})\\
+        &= \sum_{i,j} \sqrt{p_i} \sqrt{p_j} \kbt{\psi_i}{\psi_j} \delta_{ij}\\
+        &= \sum_i p_i \kb{\psi_i} = \rho.
 \end{align*}
 Thus $\ket{\psi}$ is a purification of $\rho$.
 
 \vspace{5mm}
 (2)
-Probability
+
+Define the projector $P$ by $P = I \otimes \kb{i}$.
+The probability we get the result $i$ is
 \begin{align*}
-	\Tr \left[ (I \otimes \kb{i}) \kb{\psi}\right] = \braket{\psi | (I \otimes \kb{i}) | \psi} = p_i \braket{\psi_i | \psi_i} = p_i.
+    \Tr \left[ P \kb{\psi}\right] = \braket{\psi | P | \psi} = \braket{\psi | (I \otimes \kb{i}) | \psi} = p_i \braket{\psi_i | \psi_i} = p_i.
 \end{align*}
 
-Post-measurement state
+The post-measurement state is
 \begin{align*}
-	\frac{(I \otimes \kb{i} \ket{\psi})}{\sqrt{p_i}} = \frac{\sqrt{p_i} \ket{\psi_i}}{\sqrt{p_i}} = \ket{\psi_i}.
+    \frac{P \ket{\psi}}{\sqrt{p_i}}
+    = \frac{(I \otimes \kb{i}) \ket{\psi}}{\sqrt{p_i}}
+        = \frac{\sqrt{p_i} \ket{\psi_i}\ket{i}}{\sqrt{p_i}} = \ket{\psi_i}\ket{i}.
 \end{align*}
 
+If we only focus on the state on system $A$,
+\begin{align*}
+    \Tr_R (\ket{\psi_i} \ket{i}) = \ket{\psi_i}.
+\end{align*}
 
 \vspace{5mm}
 (3)
 
-Suppose $\ket{AR}$ is a purification of $\rho$ such that $\ket{AR} = \sum_i \sqrt{p_i} \ket{\psi_i} \ket{r_i}$.
-By exercise 2.81, the others purification is written as $(I \otimes U) \ket{AR}$.
+($\{ \ket{\psi_i} \}$ is not necessary an orthonormal basis.)
+
+
+Suppose $\ket{AR}$ is a purification of $\rho$ and its Schmidt decomposition is $\ket{AR} = \sum_i \sqrt{\lambda_i} \ket{\phi_i^A} \ket{\phi_i^R}$.
+
+From assumption
 \begin{align*}
-	(I \otimes U)  \ket{AR} &= (I \otimes U) \sum_i \sqrt{p_i} \ket{\psi_i} \ket{r_i}\\
-		&= \sum_i \sqrt{p_i} \ket{\psi_i} U\ket{r_i}\\
-		&= \sum_i \sqrt{p_i} \ket{\psi_i} \ket{i}
+    \Tr_R \left( \kb{AR} \right) = \sum_i \lambda_i \kb{\phi_i^A} = \sum_i p_i \kb{\psi_i}.
 \end{align*}
-where $U = \sum_i \kbt{i}{r_i}$.
 
-By (2), if we measure the system $R$ w.r.t $\ket{i}$, post-measurement state for system $A$ is $\ket{\psi_i}$ with probability $p_i$, which prove the assertion.
+By theorem 2.6, there exits an unitary matrix $u_{ij}$ such that $\sqrt{\lambda_i}\ket{\phi_i^A} = \sum_j u_{ij} \sqrt{p_j} \ket{\psi_j}$.
+Then
+\begin{align*}
+    \ket{AR} &= \sum_i \left( \sum_j u_{ij} \sqrt{p_j} \ket{\psi_j} \right) \ket{\phi_i^R}\\
+             &= \sum_j \sqrt{p_j} \ket{\psi_j} \otimes\left( \sum_i u_{ij} \ket{\phi_i^R} \right)\\
+             &= \sum_j \sqrt{p_j} \ket{\psi_j} \ket{j}\\
+             &= \sum_i \sqrt{p_i} \ket{\psi_i} \ket{i}
+\end{align*}
+where $\ket{i} = \sum_k u_{ki} \ket{\phi_k^R}$.
 
+About $\ket{i}$,
+\begin{align*}
+    \braket{k | l} &= \sum_{m,n} u_{mk}^* u_{nl} \braket{\phi_m^R | \phi_n^R }\\
+        &= \sum_{m,n} u_{mk}^* u_{nl} \delta_{mn}\\
+        &= \sum_m u_{mk}^* u_{ml}\\
+        &= \delta_{kl}, ~~~(\because u_{ij} \text{ is unitary.})
+\end{align*}
+which implies $\ket{j}$ is an orthonormal basis for system $R$.
+
+Therefore if we measure system $R$ w.r.t $\ket{j}$, we obtain $j$ with probability $p_j$ and post-measurement state for $A$ is $\ket{\psi_j}$ from (2).
+Thus for any purification $\ket{AR}$, there exists an orthonormal basis $\ket{i}$ which satisfies the assertion.
 
 
 \Textbf{Problem 2.1}
