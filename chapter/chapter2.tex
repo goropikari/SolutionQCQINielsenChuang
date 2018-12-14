@@ -1843,19 +1843,38 @@ Read following paper:
 
 \Textbf{2.67}
 
-Let $\ket{w_i},\ket{w_j'},\ket{u_j'}$ be orthonormal bases for $W$, $W^\perp$, $( \mathrm{Im} U )^\perp$, respectively.
+Suppose $W^\perp$ is the orthogonal complement of $W$. Then $V = W \oplus W^\perp$.
+Let $\ket{w_i},\ket{w_j'},\ket{u_j'}$ be orthonormal bases for $W$, $W^\perp$, $\left( \mathrm{image}(U) \right)^\perp$, respectively.
 
-Define $U'$ as $U'|_W\ket{w_i} = U\ket{w_i} (= \ket{u_i})$ and $U'|_{W^\perp}\ket{w_j'} = \ket{u_j'}$
+% Define $U'$ as $U'|_W\ket{w_i} = U\ket{w_i} (= \ket{u_i})$ and $U'|_{W^\perp}\ket{w_j'} = \ket{u_j'}$
+Define $U': V \rightarrow V$ as $U' = \sum_i \kbt{u_i}{w_i} + \sum_j \kbt{u_j'}{w_j'}$,
+where $\ket{u_i} = U \ket{w_i}$.
 
-Then for all $\ket{w}$ in $W$, $U'\ket{w} = U\ket{w}$,
-and for any $\ket{v_1} = \sum_{i,j} w_i^{(1)}\ket{w_i}+w_j'^{(1)}\ket{w_j'}$
-and $\ket{v_2} = \sum_{i,j} w_i^{(2)}\ket{w_i}+w_j'^{(2)}\ket{w_j'}$ in $V$,
+
+Now
 \begin{align*}
-    \braket{v_1|U'^{\dagger}U'|v_2} &= (U'\ket{v_1}, U'\ket{v_2}) \\
-    &= \left( \sum_{i,j}w_i^{(1)}\ket{u_i}+w_j'^{(1)}\ket{u_j'},~ \sum_{i,j}w_i^{(2)}\ket{u_i}+w_j'^{(2)}\ket{u_j'} \right) \\
-    &= \sum_{i,j} \left( w_i^{(1)} \right)^* w_i^{(2)} + \left( w_j'^{(1)} \right)^* w_j'^{(2)} \\
-    &= \braket{v_1|v_2}.
+    (U')^\dagger U' &= \left( \sum_{i = 1}^{\dim W} \kbt{w_i}{u_i} + \sum_{j = 1}^{\dim W^\perp} \kbt{w_j'}{u_j'} \right)  \left( \sum_i \kbt{u_i}{w_i} + \sum_j \kbt{u_j'}{w_j'} \right)\\
+                    &= \sum_i \kb{w_i} + \sum_j \kb{w_j'} = I
 \end{align*}
+%
+and
+%
+\begin{align*}
+    U' (U')^\dagger &= \left( \sum_i \kbt{u_i}{w_i} + \sum_j \kbt{u_j'}{w_j'} \right) \left( \sum_i \kbt{w_i}{u_i} + \sum_j \kbt{w_j'}{u_j'} \right)\\
+                    &= \sum_i \kb{u_i} + \sum_j \kb{u_j'} = I.
+\end{align*}
+%
+Thus $U'$ is an unitary operator.
+Moreover, for all $\ket{w} \in W$,
+\begin{align*}
+    U' \ket{w} &= \left( \sum_i \kbt{u_i}{w_i} + \sum_j \kbt{u_j'}{w_j'} \right) \ket{w}\\
+               &= \sum_i \ket{u_i} \braket{w_i | w} + \sum_j \ket{u_j'} \braket{w_j' | w}\\
+			   &= \sum_i \ket{u_i} \braket{w_i | w}  ~~~(\because \ket{w_j'} \perp \ket{w})\\
+			   &= \sum_i U \ket{w_i} \braket{w_i | w}\\
+			   &= U \ket{w}.
+\end{align*}
+%
+Therefore $U'$ is an extension of $U$.
 
 
 \Textbf{2.68}
@@ -1966,7 +1985,7 @@ From spectral decomposition,
 \end{align*}
 
 Suppose $\Tr (\rho^2) = 1$. Then $\sum_i p_i^2 = 1$.
-Since $p_i^2 < p_i$ for $0 < p_i < 1$, 
+Since $p_i^2 < p_i$ for $0 < p_i < 1$,
 only single $p_i$ should be 1 and otherwise have to  vanish.
 Therefore $\rho = \kb{\psi_i}$. It is a pure state.
 
