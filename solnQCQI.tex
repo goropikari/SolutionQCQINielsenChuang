@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \usepackage[width=16.00cm, height=24.00cm]{geometry}
-\usepackage[dvipdfmx]{graphicx, hyperref}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage[english]{babel}
 
 %図の場所をなるべく指定した場所にする
@@ -19,6 +19,7 @@
 %単位を書くときに使う
 \usepackage{siunitx}
 
+\usepackage{CJKutf8}
 \usepackage{ascmac} % screen
 \usepackage{ulem}
 \usepackage{cases}
@@ -61,8 +62,10 @@ This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
 \include{chapter/errata}
 
+\mainmatter
 \input{chapter/chapter2}
 \setcounter{chapter}{7}
 \input{chapter/chapter8}
