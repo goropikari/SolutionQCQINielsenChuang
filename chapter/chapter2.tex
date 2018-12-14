@@ -395,19 +395,19 @@ Thus
 	\begin{align*}
 		A \ket{\label{text}} = \lambda \ket{\lambda}.
 	\end{align*}
-	Therefore 
+	Therefore
 	\begin{align*}
 		\braket{\lambda | A | \lambda} = \lambda \braket{\lambda | \lambda} = \lambda.
 	\end{align*}
 	On the other hand,
 	\begin{align*}
-		\lambda^*  = \braket{\lambda | A | \lambda}^* 
+		\lambda^*  = \braket{\lambda | A | \lambda}^*
 								= \braket{\lambda | A^\dagger |  \lambda}
 								= \braket{\lambda | A | \lambda}
 								= \lambda \braket{\lambda | \lambda} = \lambda.
 	\end{align*}
 	Hence eigenvalues of Hermitian matrix are real.
-	
+
 	($\Leftarrow$) Suppose eigenvalues of $A$ are real. From spectral theorem, normal matrix $A$ can be written by
 	\begin{align}
 		A= \sum_i \lambda_i \kb{\lambda_i}
@@ -1677,14 +1677,14 @@ Normalized eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{b
 	While I review my proof, I notice that my proof has a defect.
 	The case $(v_1,v_2,v_3) = (0,0,1)$, second component of eigenstate, $\frac{1-v_3}{v_1 - iv_2}$, diverges.
 	So I implicitly assume $v_1 - iv_2 \neq 0$. Hence my proof is incomplete.
-	
+
 	Since the exercise doesn't require explicit form of projector, we should prove the problem more abstractly.
-	In order to prove, we use the following properties of $\vec{v} \cdot \vec{\sigma}$ 
+	In order to prove, we use the following properties of $\vec{v} \cdot \vec{\sigma}$
 	\begin{itemize}
 		\item $\vec{v} \cdot \vec{\sigma}$ is Hermitian
 		\item $(\vec{v} \cdot \vec{\sigma})^2 = I$ where $\vec{v}$ is a real unit vector.
 	\end{itemize}
-	
+
 	We can easily check above conditions.
 	\begin{align*}
 	(\vec{v} \cdot \vec{\sigma})^\dagger &= (v_1 \sigma_1 + v_2 \sigma_2 + v_3 \sigma_3)^\dagger\\
@@ -1692,7 +1692,7 @@ Normalized eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{b
 	&= v_1 \sigma_1 + v_2 \sigma_2 + v_3 \sigma_3~~~(\because \text{Pauli matrices are Hermitian.})\\
 	&= \vec{v} \cdot \vec{\sigma}
 	\end{align*}
-	
+
 	\begin{align*}
 	(\vec{v} \cdot \vec{\sigma})^2 &= \sum_{j,k=1}^3 (v_j \sigma_j)  (v_k \sigma_k)\\
 	&= \sum_{j,k=1}^3 v_j v_k \sigma_j \sigma_k\\
@@ -1701,8 +1701,8 @@ Normalized eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{b
 	&= \sum_{j=1}^3 v_j^2 I\\
 	&= I ~~~\left(\because \sum_j v_j^2 = 1 \right)
 	\end{align*}
-	
-	
+
+
 	\begin{proof}
 		Suppose $\ket{\lambda}$ is an eigenstate of $\vec{v} \cdot \vec{\sigma}$ with eigenvalue $\lambda$. Then
 		\begin{align*}
@@ -1715,25 +1715,25 @@ Normalized eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{b
 		\therefore \lambda^2\ket{\lambda} = \ket{\lambda}.
 		\end{align*}
 		Thus $\lambda^2 = 1 \Rightarrow \lambda = \pm 1$. Therefore $\vec{v} \cdot \vec{\sigma}$ has eigenvalues $\pm 1$.
-		
+
 		Let $\ket{\lambda_1}$ and $\ket{\lambda_{-1}}$ are eigenvectors with eigenvalues $1$ and $-1$, respectively.
 		I will prove that $P_\pm = \kb{\lambda_{\pm 1}}$.
-		
+
 		In order to prove above equation, all we have to do is prove following condition. (see Theorem \ref{thm:zerooperator})
 		\begin{screen}
 			\begin{align}
 				\braket{\psi | (P_\pm - \kb{\lambda_{\pm 1}})| \psi} = 0 \text{ for all } \ket{\psi} \in \mathds{C}^2.
 			\end{align}
 		\end{screen}
-		
+
 		Since $\vec{v} \cdot \vec{\sigma}$ is Hermitian, $\ket{\lambda_1}$ and $\ket{\lambda_{-1}}$ are orthonormal vector ($\because $ Exercise 2.22).
 		Let $\ket{\psi} \in \mathds{C}^2$ be an arbitrary state. $\ket{\psi}$ can be written as
 		\begin{align*}
 		\ket{\psi} = \alpha \ket{\lambda_1} + \beta \ket{\lambda_{\pm 1}} ~~(|\alpha|^2 + |\beta|^2 = 1, \alpha, \beta \in \mathds{C}).
 		\end{align*}
-		
+
 		\begin{align*}
-		\braket{\psi | (P_{\pm} - \kb{\lambda_\pm})| \psi} 
+		\braket{\psi | (P_{\pm} - \kb{\lambda_\pm})| \psi}
 		%		&= \braket{\psi | \left(\frac{1}{2} (I \pm \vec{v} \cdot \vec{\sigma}) - \kb{\lambda_\pm}\right)| \psi}\\
 		&= \braket{\psi | P_\pm | \psi} - \braket{\psi | \lambda_\pm} \braket{\lambda_\pm | \psi}.\\
 		\braket{\psi | P_\pm | \psi} &= \braket{\psi | \frac{1}{2}(I \pm \vec{v} \cdot \vec{\sigma}) | \psi}\\
@@ -1743,7 +1743,7 @@ Normalized eigenvalue is $\ket{\lambda_{-1}} = \sqrt{ \frac{1-v_3}{2 }} \begin{b
 		\braket{\psi | \lambda_1} \braket{\lambda_1 | \psi} &= |\alpha|^2\\
 		\braket{\psi | \lambda_{-1}} \braket{\lambda_{-1}| \psi} &= |\beta|^2 = 1  - |\alpha|^2
 		\end{align*}
-		
+
 		Therefore $\braket{\psi | (P_\pm - \kb{\lambda_{\pm 1}})| \psi} = 0$ for all $\ket{\psi} \in \mathds{C}^2$.
 		Thus $P_\pm = \kb{\lambda_{\pm 1}}$.
 	\end{proof}
@@ -1809,7 +1809,7 @@ Since $E_m$ is POVM,  for arbitrary  unitary $U$, $M_m^\dagger M_m$ is POVM.
 
 
 \Textbf{2.64}
-Read following paper: 
+Read following paper:
 
 Lu-Ming Duan, Guang-Can Guo.  Probabilistic cloning and identification of linearly independent quantum states. Phys. Rev. Lett.,80:4999-5002, 1998. arXiv eprint quant-ph/9804064.
 \url{https://arxiv.org/abs/quant-ph/9804064}
@@ -1838,17 +1838,17 @@ Lu-Ming Duan, Guang-Can Guo.  Probabilistic cloning and identification of linear
 
 \Textbf{2.67}
 
-Let $\ket{w_i},\ket{w_j'},\ket{u_j'}$ be orthonormal bases for $W$, $W^\perp$, (Im$U)^\perp$, respectively.
+Let $\ket{w_i},\ket{w_j'},\ket{u_j'}$ be orthonormal bases for $W$, $W^\perp$, $( \mathrm{Im} U )^\perp$, respectively.
 
 Define $U'$ as $U'|_W\ket{w_i} = U\ket{w_i} (= \ket{u_i})$ and $U'|_{W^\perp}\ket{w_j'} = \ket{u_j'}$
 
-Then for all $\ket{w}$ in $W$, $U'\ket{w} = U\ket{w}$, 
-and for any $\ket{v_1} = \sum_{i,j} w_i^{(1)}\ket{w_i}+w_j'^{(1)}\ket{w_j'}$ 
-and $\ket{v_2} = \sum_{i,j} w_i^{(2)}\ket{w_i}+w_j'^{(2)}\ket{w_j'}$ in $V$, 
+Then for all $\ket{w}$ in $W$, $U'\ket{w} = U\ket{w}$,
+and for any $\ket{v_1} = \sum_{i,j} w_i^{(1)}\ket{w_i}+w_j'^{(1)}\ket{w_j'}$
+and $\ket{v_2} = \sum_{i,j} w_i^{(2)}\ket{w_i}+w_j'^{(2)}\ket{w_j'}$ in $V$,
 \begin{align*}
     \braket{v_1|U'^{\dagger}U'|v_2} &= (U'\ket{v_1}, U'\ket{v_2}) \\
-    &= (\sum_{i,j}w_i^{(1)}\ket{u_i}+w_j'^{(1)}\ket{u_j'}, \sum_{i,j}w_i^{(2)}\ket{u_i}+w_j'^{(2)}\ket{u_j'}) \\
-    &= \sum_{i,j}w_i^{(1)}w_i^{(2)}+w_j'^{(1)}w_j'^{(2)} \\
+    &= \left( \sum_{i,j}w_i^{(1)}\ket{u_i}+w_j'^{(1)}\ket{u_j'},~ \sum_{i,j}w_i^{(2)}\ket{u_i}+w_j'^{(2)}\ket{u_j'} \right) \\
+    &= \sum_{i,j} \left( w_i^{(1)} \right)^* w_i^{(2)} + \left( w_j'^{(1)} \right)^* w_j'^{(2)} \\
     &= \braket{v_1|v_2}.
 \end{align*}
 
