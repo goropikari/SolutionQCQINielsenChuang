@@ -1,5 +1,8 @@
 # Solution for Quantum Computation and Quantum Information
 
+[get the PDF](https://docs.google.com/viewer?url=https://github.com/goropikari/SolutionForQuantumComputationAndQuantumInformation/raw/master/solnQCQI.pdf)
+
+
 This is unofficial solution manual for "[Quantum Computation and Quantum Information: 10th Anniversary Edition](http://www.cambridge.org/jp/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&isbn=9781107002173#BBFv83H3ofgcgG3A.97)" (ISBN-13: 978-1107002173) by Nielsen and Chuang
 
 There is no guarantee that these solutions are correct.
