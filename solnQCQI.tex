@@ -35,6 +35,14 @@
 \usepackage{color}
 
 
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\lhead[\leftmark ]{\thepage}
+\rhead[\thepage]{\leftmark}
+
+\cfoot{\footnotesize \textcopyright 2018 goropikari - \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}}
+
 % コマンド定義
 \DeclareMathOperator{\Tr}{Tr}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm ||x||
@@ -57,6 +65,26 @@
 \section*{Copylight Notice:}
 \ccbyncsa\\
 This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License}.
+
+
+\section*{Repository}
+The latest version and source \LaTeX code are located in\\ \url{https://github.com/goropikari/SolutionForQuantumComputationAndQuantumInformation}.
+
+\section*{For readers}
+This is an unofficial solution manual for "\href{http://www.cambridge.org/jp/academic/subjects/physics/quantum-physics-quantum-information-and-quantum-computation/quantum-computation-and-quantum-information-10th-anniversary-edition?format=HB&isbn=9781107002173#BBFv83H3ofgcgG3A.97}{Quantum Computation and Quantum Information: 10th Anniversary Edition}" (ISBN-13: 978-1107002173) by Michael A. Nielsen and Isaac L. Chuang.
+
+
+
+I have studied quantum information theory as a hobby.
+And I'm not a researcher.
+So there is no guarantee that these solutions are correct.
+Especially because I'm not good at mathematics, proofs are often wrong.
+Don't trust me. Verify yourself!
+
+If you find some mistake or have some comments, please feel free to open an issue or a PR.
+\begin{flushright}
+    \href{https://github.com/goropikari}{goropikari}
+\end{flushright}
 
 \tableofcontents
 \newpage

@@ -6,10 +6,12 @@
     \item p.408. eq (9.49) $\sum_i p_i D(\rho_i, \sigma_i) + D(p_i, q_i)$ should be $\sum_i p_i D(\rho_i, \sigma_i) + \textcolor[rgb]{1,0,0}{2}D(p_i, q_i)$.
 
     \begin{align*}
-    \text{eqn } (9.48) &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i (p_i - q_i) \Tr (P \sigma_i)\\
-    &\leq \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i (p_i - q_i)~~~(\because \Tr (P \sigma_i) \leq 1)\\
-    &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + 2 \frac{\sum_i (p_i - q_i)}{2}\\
-    &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + 2D(p_i, q_i)
+    \text{eqn } (9.48) 
+        &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i (p_i - q_i) \Tr (P \sigma_i)\\
+        &\leq \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i |p_i - q_i| \Tr (P \sigma_i)~~~(\because p_i - q_i \leq |p_i - q_i|)\\
+        &\leq \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + \sum_i |p_i - q_i|~~~(\because \Tr (P \sigma_i) \leq 1)\\
+        &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + 2 \frac{\sum_i |p_i - q_i|}{2}\\
+        &= \sum_i p_i \Tr (P(\rho_i - \sigma_i)) + 2D(p_i, q_i)
     \end{align*}
 %
     \item p.409. Exercise 9.12. If $\rho = \sigma$, then $D(\rho, \sigma) = 0$. Furthermore trace distance is non-negative. Therefore $0 \leq D(\mathcal{E}(\rho), \mathcal{E}(\sigma)) \leq 0 \Rightarrow D(\mathcal{E}(\rho), \mathcal{E}(\sigma))  = 0$. So I think the map $\mathcal{E}$ is not strictly contractive. If $p \neq 1$ and $\rho \neq \sigma$, then $D(\mathcal{E}(\rho), \mathcal{E}(\sigma)) < D(\rho, \sigma)$ is satisfied.
