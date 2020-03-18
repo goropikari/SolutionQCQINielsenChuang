@@ -35,4 +35,15 @@ We then see that $F F^{\dagger} = I$.
 It is straightforward to show that $F F^{\dagger} =F^{\dagger} F$, we can then conclude that
 the quantum Fourier transform is unitary.
 
+\Textbf{5.2} 
+
+the $N$ qubit state $|00...0 \rangle$ is a computational basis state, we can use directly the provided  formula 5.2 :
+
+$$  |j\rangle \rightarrow \frac{1}{\sqrt{N}} \sum_{k=0}^{N-1}  e^{2 i \pi j k /N} |k \rangle$$
+
+applying it to $|00...0 \rangle$ we get :
+
+$$|00...0 \rangle \rightarrow \frac{1}{2^{N/2}} \sum_{k=0}^{2^N-1} |k \rangle$$
+
+with $|k \rangle$ the $2^N$ computation basis states for $N$ qubits.
 
