@@ -1,0 +1,11 @@
+version: "3"
+services:
+  qcqi:
+    build: .
+    volumes:
+      - .:/qcqi
+
+    tty: true
+    stdin_open: true
+
+    command: pdflatex solnQCQI
