@@ -1,0 +1,38 @@
+\chapter{The quantum Fourier transform and it's application}
+
+
+\Textbf{5.1} 
+
+
+We can write the Fourier quantum transformation as a matrix U.
+By definition, for an arbitrary ket $|x\rangle = \sum_{j=0}^{N-1} x_j | j \rangle$, the 
+quantum fourier transform maps $|x\rangle$ to $|y\rangle$ as such, noting $w = e^{2 i \pi /N}$ :
+
+$$F(|x\rangle) = |y\rangle = \frac{1}{\sqrt{N}}  \sum_{j=0}^{N-1}  \sum_{n=0}^{N-1} x_n w^{k n} | j \rangle$$
+
+the Fourier quantum transformation can then be written as a matrix equation, giving the Fourier transform's
+matrix, $F |x\rangle = |y\rangle$, with :
+
+$$ F =  \frac{1}{\sqrt{N}} \begin{bmatrix}
+	1      & 1       & \hdots & 1         \\
+	1      & w       & \hdots & w^{N-1}   \\ 
+	1      & w^2     & \hdots & w^{2(N-1)} \\
+	\vdots & \vdots  & \vdots & \vdots     \\
+	1      & w^{N-1} & \hdots & w^{(N-1)(N-1)}
+\end{bmatrix}.$$
+
+Let's now show that this matrix is indeed unitary.
+If we note $A = F F^{\dagger}$, then 
+$$A_{j,k} = \sum_{n=1}^N F_{j,n} F^{\dagger}_{n,k} = \frac{1}{N} (1 + w^{j-n}+w^{2(j-n)}+...+w^{(N-1)(j-n)})$$.
+
+If $j=n$ then $A_{j,k} = \frac{N}{N} = 1$.
+
+If $j \neq n$ then $A_{j,k} = 0$ according to the following orthogonal property over the roots of unity : 
+
+$$ \sum_{k=0}^{N-1} (z^{jk})^\dagger z^{j' k} = 0 \quad \mathtt{if } \quad j \neq j'$$
+
+We then see that $F F^{\dagger} = I$.
+It is straightforward to show that $F F^{\dagger} =F^{\dagger} F$, we can then conclude that
+the quantum Fourier transform is unitary.
+
+
