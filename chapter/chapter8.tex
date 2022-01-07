@@ -20,6 +20,28 @@ And from eqn (2.143) (on page 99), $p(m) = \Tr (M_m^\dagger M_m \rho) = \Tr (M_m
 
 
 \Textbf{8.4}
+First let's compute $U$
+\begin{align*}
+    U & = P_0 \otimes I + P_1 \otimes X\\
+    & = \begin{bmatrix} I & 0 \\ 0 & X \end{bmatrix}\\
+    & = \begin{bmatrix} 1 &0 & 0 & 0\\
+    0 & 1 & 0 & 0\\
+    0 & 0 & 0 & 1\\
+    0 & 0 & 1 & 0
+    \end{bmatrix}\\
+    & = C_{NOT}
+\end{align*}
+Recall: Operator-sum representation is $\mathcal E(\rho) = \sum_k E_k \rho E_k^\dagger$, where $E_k = \braket{e_k | U | e_0}$.\\
+Given in the problem prompt, the environment initializes in $\ket 0$
+\begin{align*}
+    \therefore \ket{e_0} = \ket 0
+\end{align*}
+Our final answer is:
+\begin{align*}
+    \boxed{\mathcal E(\rho) = \sum_k E_k \rho E_k^\dagger \  \text{ s.t. } \ E_k = \braket{e_k | C_{NOT} | 0}}
+\end{align*}
+
+
 \Textbf{8.5}
 \Textbf{8.6}
 \Textbf{8.7}
